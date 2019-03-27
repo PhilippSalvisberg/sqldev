@@ -1,0 +1,20 @@
+<items>
+	<item type="TABLE">
+		<title>Greet...</title>
+		<prompt>
+			<label>Greeting phrase</label>
+		</prompt>
+		<!-- substitution of parameters does not work :-( -->
+		<script><![CDATA[var greeting = "#0# Table #OBJECT_NAME#.";
+var pane = Java.type("javax.swing.JOptionPane");
+pane.showMessageDialog(null, greeting, "Hello", pane.INFORMATION_MESSAGE);
+]]>
+		</script>
+		<help>JavaScript Hello World</help>
+		<confirmation>
+			<title>Confirmation</title>
+			<!-- substitution of parameters works here -->
+			<prompt>Table "#OBJECT_NAME#" greeted with #0#.</prompt>
+		</confirmation>
+	</item>
+</items>
