@@ -1,0 +1,38 @@
+<items>
+	<item type="TABLE" reloadparent="true">
+		<title>Create Table as Select...</title>
+		<prompt>
+			<label>New Table Name</label>
+		</prompt>
+		<prompt type="radio">
+			<label>Rows in Percent</label>
+			<value><![CDATA[STATIC:1:25:50:75:100]]>
+			</value>
+		</prompt>
+		<prompt>
+			<label>Sample Data (Random)?</label>
+			<value><![CDATA[STATIC:No:Yes]]></value>
+		</prompt>
+		<sql><![CDATA[declare
+   l_sql varchar2(32767) := 'create table #0# as select * from "#OBJECT_OWNER#"."#OBJECT_NAME#"';
+   l_count integer;
+begin
+   if '#1#' != '100' then
+      if '#2#' = 'No' then
+         select count(*) * #1# / 100 into l_count from "#OBJECT_OWNER#"."#OBJECT_NAME#";
+         l_sql := l_sql || ' where rownum <= ' || l_count;
+      else
+         l_sql := l_sql || ' sample(#1#)';
+      end if;
+   end if;
+   execute immediate l_sql;
+end;
+]]>
+		</sql>
+		<help>Copy a table. Completely or a chosen subset in percent.</help>
+		<confirmation>
+			<title>Confirmation</title>
+			<prompt>Table "#OBJECT_NAME#" has been copied to #0#.</prompt>
+		</confirmation>
+	</item>
+</items>
