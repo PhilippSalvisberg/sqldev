@@ -5,7 +5,7 @@
 			<label>Greeting phrase</label>
 		</prompt>
 		<!-- substitution of parameters does not work :-( -->
-		<script><![CDATA[var greeting = "#0# Table #OBJECT_NAME#.";
+		<script><![CDATA[var greeting = prompt0 + " table "+ OBJECT_NAME +".";
 var pane = Java.type("javax.swing.JOptionPane");
 pane.showMessageDialog(null, greeting, "Hello", pane.INFORMATION_MESSAGE);
 ]]>
