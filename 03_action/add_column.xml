@@ -16,6 +16,8 @@
         <prompt datatype="NUMBER" type_attrib="scale" validator="datatype.validator">
             <label>Scale</label>
         </prompt>
+        <!-- for Oracle connections dbutil is an instance of oracle.dbtools.db.OracleUtil (dbtools-common.jar) 
+             initialized with the current connection -->
         <script>
             <![CDATA[var sql;
 if (prompt1 == 'NUMBER' && prompt1.length>0 && prompt3.length>0 ) {
