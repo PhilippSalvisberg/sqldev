@@ -6,14 +6,15 @@
 		</prompt>
 		<prompt type="radio">
 			<label>Rows in Percent</label>
-			<value><![CDATA[STATIC:1:25:50:75:100]]>
-			</value>
+			<value><![CDATA[STATIC:1:25:50:75:100]]></value>
 		</prompt>
 		<prompt>
 			<label>Sample Data (Random)?</label>
 			<value><![CDATA[STATIC:No:Yes]]></value>
 		</prompt>
-		<sql><![CDATA[declare
+		<sql>
+			<![CDATA[
+declare
    l_sql varchar2(32767) := 'create table #0# as select * from "#OBJECT_OWNER#"."#OBJECT_NAME#"';
    l_count integer;
 begin
@@ -27,7 +28,7 @@ begin
    end if;
    execute immediate l_sql;
 end;
-]]>
+			]]>
 		</sql>
 		<help>Copy a table. Completely or a chosen subset in percent.</help>
 		<confirmation>

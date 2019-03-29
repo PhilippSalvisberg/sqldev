@@ -3,18 +3,19 @@
 	<display id="969ffce8-0169-1000-8005-0a004b015378" type=""
 		style="Table" enable="true">
 		<name><![CDATA[All Objects]]></name>
-		<description><![CDATA[]]>
-		</description>
-		<tooltip><![CDATA[]]>
-		</tooltip>
-		<drillclass><![CDATA[]]>
-		</drillclass>
+		<description><![CDATA[]]></description>
+		<tooltip><![CDATA[]]></tooltip>
+		<drillclass><![CDATA[]]></drillclass>
 		<CustomValues>
 			<TYPE><![CDATA[horizontal]]></TYPE>
 		</CustomValues>
 		<query>
-			<sql><![CDATA[select * from all_objects
-order by owner, object_type, object_name]]></sql>
+			<sql>
+				<![CDATA[
+select * from all_objects
+order by owner, object_type, object_name
+				]]>
+			</sql>
 		</query>
 	</display>
 </displays>

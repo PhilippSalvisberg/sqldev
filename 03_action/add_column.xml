@@ -1,25 +1,26 @@
 <!-- example from dialogs.xsd, see also https://community.oracle.com/thread/4209459 -->
 <items>
-    <item type="TABLE" reload="true">
-        <title>Add Column...</title>
-        <prompt>
-            <label>Column Name</label>
-        </prompt>
-        <prompt>
-            <label>Data Type</label>
-            <value><![CDATA[STATIC:VARCHAR2:NUMBER:INTEGER:DATE:TIMESTAMP:CLOB:BLOB:CHAR:NCHAR:NVARCHAR2:NCLOB:INTERVAL DAY:INTERVAL YEAR:LONG:LONG RAW:NUMERIC:RAW:REAL:ROWID:BFILE:FLOAT:DECIMAL:CHAR]]>
-            </value>
-        </prompt>
-        <prompt datatype="NUMBER" type_attrib="precision" validator="datatype.validator">
-            <label>Precision</label>
-        </prompt>
-        <prompt datatype="NUMBER" type_attrib="scale" validator="datatype.validator">
-            <label>Scale</label>
-        </prompt>
-        <!-- for Oracle connections dbutil is an instance of oracle.dbtools.db.OracleUtil (dbtools-common.jar) 
-             initialized with the current connection -->
-        <script>
-            <![CDATA[var sql;
+	<item type="TABLE" reload="true">
+		<title>Add Column...</title>
+		<prompt>
+			<label>Column Name</label>
+		</prompt>
+		<prompt>
+			<label>Data Type</label>
+			<value><![CDATA[STATIC:VARCHAR2:NUMBER:INTEGER:DATE:TIMESTAMP:CLOB:BLOB:CHAR:NCHAR:NVARCHAR2:NCLOB:INTERVAL DAY:INTERVAL YEAR:LONG:LONG RAW:NUMERIC:RAW:REAL:ROWID:BFILE:FLOAT:DECIMAL:CHAR]]>
+			</value>
+		</prompt>
+		<prompt datatype="NUMBER" type_attrib="precision" validator="datatype.validator">
+			<label>Precision</label>
+		</prompt>
+		<prompt datatype="NUMBER" type_attrib="scale" validator="datatype.validator">
+			<label>Scale</label>
+		</prompt>
+		<!-- for Oracle connections dbutil is an instance of oracle.dbtools.db.OracleUtil 
+			(dbtools-common.jar) initialized with the current connection -->
+		<script>
+            <![CDATA[
+var sql;
 if (prompt1 == 'NUMBER' && prompt1.length>0 && prompt3.length>0 ) {
     sql = 'alter table "' + OBJECT_OWNER + '"."' + OBJECT_NAME +'" add('+prompt0 + ' ' + prompt1 + '(' + prompt2 + ','+ prompt3 + '))';
 } else if ( ( prompt1 == 'NUMBER' && prompt1.length>0 && prompt3.length==0) ||  prompt1 == 'VARCHAR2' ) {
@@ -27,12 +28,13 @@ if (prompt1 == 'NUMBER' && prompt1.length>0 && prompt3.length>0 ) {
 } else {
     sql = 'alter table "'+OBJECT_OWNER+'"."'+OBJECT_NAME+'" add('+prompt0+' '+prompt1+')';
 }
-dbutil.execute(sql);]]>
-        </script>
-        <help>Add a column to the selected table.</help>
-        <confirmation>
-            <title>Confirmation</title>
-            <prompt>Column #0# has been added to table "#OBJECT_NAME#"</prompt>
-        </confirmation>
-    </item>
+dbutil.execute(sql);
+			]]>
+		</script>
+		<help>Add a column to the selected table.</help>
+		<confirmation>
+			<title>Confirmation</title>
+			<prompt>Column #0# has been added to table "#OBJECT_NAME#"</prompt>
+		</confirmation>
+	</item>
 </items>
