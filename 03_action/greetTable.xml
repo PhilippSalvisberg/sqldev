@@ -1,0 +1,59 @@
+<items>
+	<item type="TABLE">
+		<title>Greet...</title>
+		<prompt>
+			<label>Greeting phrase</label>
+		</prompt>
+		<script>
+			<![CDATA[
+var greeting = prompt0 + " table "+ OBJECT_NAME +"!";
+var toType = function(obj) {
+	return ({}).toString.call(obj)
+}
+var vars = ""
+var add = function(name, obj) {
+	vars = vars + name + ": " + obj + " " + toType(obj) + "\n"
+}
+var addDelimiter = function() {
+	vars = vars + "--------------------\n";
+}
+add("CATALOG", CATALOG);
+add("CHILD_NAME", CHILD_NAME); 
+add("COLUMN_NAME", COLUMN_NAME); 
+add("CONNECTION_NAME", CONNECTION_NAME); 
+add("CREATED", CREATED);
+add("ConnectionType", ConnectionType); 
+add("DUPLICATED", DUPLICATED);
+add("EXTERNAL", EXTERNAL);
+add("GENERATED", GENERATED); 
+add("ID", ID);
+add("IOT_TYPE", IOT_TYPE); 
+add("LAST_DDL_TIME", LAST_DDL_TIME); 
+add("NAME", NAME);
+add("OBJECT_FOLDER_TYPE", OBJECT_FOLDER_TYPE); 
+add("OBJECT_ID", OBJECT_ID);
+add("OBJECT_NAME", OBJECT_NAME); 
+add("OBJECT_NAMES", OBJECT_NAMES); 
+add("OBJECT_OWNER", OBJECT_OWNER);
+add("OBJECT_OWNERS", OBJECT_OWNERS); 
+add("OBJECT_TYPE", OBJECT_TYPE);
+add("PARTITIONED", PARTITIONED);
+add("SCHEMA", SCHEMA);
+add("SHORT_NAME", SHORT_NAME); 
+add("TEMPORARY", TEMPORARY);
+add("TYPE", TYPE);
+addDelimiter();
+vars = vars + "conn: " + conn + "\n"
+vars = vars + "dbutil: " + dbutil + "\n"
+addDelimiter();
+var pane = Java.type("javax.swing.JOptionPane");
+pane.showMessageDialog(null, vars, greeting, pane.INFORMATION_MESSAGE);
+			]]>
+		</script>
+		<help>JavaScript Hello World</help>
+		<confirmation>
+			<title>Confirmation</title>
+			<prompt>Table "#OBJECT_NAME#" greeted with #0#.</prompt>
+		</confirmation>
+	</item>
+</items>
