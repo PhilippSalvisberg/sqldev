@@ -1,0 +1,206 @@
+<navigator RESOURCE_FILE="oracle.dbtools.raptor.navigator.OracleNavigatorResource">
+	<objectType connType="Oracle" id="invalid-objects-root" weight="202">
+		<folder>
+			<!-- see oracle.javatools.icons.OracleIcons.class in modules/oracle.javatools/oracle.javatools/oicons.jar -->
+			<icon RSKEY="OracleIcons.OVERLAY_INVALID"></icon>
+			<!-- RSKEY should reference a resource in the bundle, however it works, but throws error in log -->
+			<label RSKEY="Invalid Objects"/>
+			<queries>
+				<query>
+					<sql  constrained="true">
+						<![CDATA[
+SELECT 'Function' AS name, 'FUNCTION' AS value FROM dual
+UNION ALL
+SELECT 'Package' AS name, 'PACKAGE' AS value FROM dual
+UNION ALL
+SELECT 'Package Body' AS name, 'PACKAGE BODY' AS value from dual
+UNION ALL
+SELECT 'Procedure' AS name, 'PROCEDURE' AS value from dual
+UNION ALL
+SELECT 'Trigger' AS name, 'TRIGGER' AS value from dual
+UNION ALL
+SELECT 'Type' AS name, 'TYPE' AS value from dual
+UNION ALL
+SELECT 'Type Body' AS name, 'TYPE BODY' AS value from dual
+UNION ALL
+SELECT 'View' AS name, 'VIEW' AS value from dual
+
+						]]>
+					</sql>
+				</query>
+			</queries>
+		</folder>
+		<node>
+			<childType id="invalid-function" nodeType="FUNCTION">
+				<queries>
+					<query>
+						<sql>
+							<![CDATA[
+SELECT object_name AS name, object_name AS value 
+  FROM user_objects
+ WHERE object_type = 'FUNCTION'
+   AND object_type = :VALUE 
+   AND status = 'INVALID'
+ ORDER by object_name
+								]]>
+						</sql>
+					</query>
+				</queries>
+			</childType>
+			<childType id="invalid-package" nodeType="PACKAGE">
+				<queries>
+					<query>
+						<sql>
+							<![CDATA[
+SELECT object_name AS name, object_name AS value 
+  FROM user_objects
+ WHERE object_type = 'PACKAGE'
+   AND object_type = :VALUE 
+   AND status = 'INVALID'
+ ORDER by object_name
+								]]>
+						</sql>
+					</query>
+				</queries>
+			</childType>
+			<childType id="invalid-package-body" nodeType="PACKAGE BODY">
+				<queries>
+					<query>
+						<sql>
+							<![CDATA[
+SELECT object_name AS name, object_name AS value 
+  FROM user_objects
+ WHERE object_type = 'PACKAGE BODY'
+   AND object_type = :VALUE 
+   AND status = 'INVALID'
+ ORDER by object_name
+								]]>
+						</sql>
+					</query>
+				</queries>
+			</childType>
+			<childType id="invalid-procedure" nodeType="PROCEDURE">
+				<queries>
+					<query>
+						<sql>
+							<![CDATA[
+SELECT object_name AS name, object_name AS value 
+  FROM user_objects
+ WHERE object_type = 'PROCEDURE'
+   AND object_type = :VALUE 
+   AND status = 'INVALID'
+ ORDER by object_name
+								]]>
+						</sql>
+					</query>
+				</queries>
+			</childType>
+			<childType id="invalid-trigger" nodeType="TRIGGER">
+				<queries>
+					<query>
+						<sql>
+							<![CDATA[
+SELECT object_name AS name, object_name AS value 
+  FROM user_objects
+ WHERE object_type = 'TRIGGER'
+   AND object_type = :VALUE 
+   AND status = 'INVALID'
+ ORDER by object_name
+								]]>
+						</sql>
+					</query>
+				</queries>
+			</childType>
+			<childType id="invalid-type" nodeType="TYPE">
+				<queries>
+					<query>
+						<sql>
+							<![CDATA[
+SELECT object_name AS name, object_name AS value 
+  FROM user_objects
+ WHERE object_type = 'TYPE'
+   AND object_type = :VALUE 
+   AND status = 'INVALID'
+ ORDER by object_name
+								]]>
+						</sql>
+					</query>
+				</queries>
+			</childType>
+			<childType id="invalid-type-body" nodeType="TYPE BODY">
+				<queries>
+					<query>
+						<sql>
+							<![CDATA[
+SELECT object_name AS name, object_name AS value 
+  FROM user_objects
+ WHERE object_type = 'TYPE BODY'
+   AND object_type = :VALUE 
+   AND status = 'INVALID'
+ ORDER by object_name
+								]]>
+						</sql>
+					</query>
+				</queries>
+			</childType>
+			<childType id="invalid-view" nodeType="VIEW">
+				<queries>
+					<query>
+						<sql>
+							<![CDATA[
+SELECT object_name AS name, object_name AS value 
+  FROM user_objects
+ WHERE object_type = 'VIEW'
+   AND object_type = :VALUE 
+   AND status = 'INVALID'
+ ORDER by object_name
+								]]>
+						</sql>
+					</query>
+				</queries>
+			</childType>
+		</node>
+	</objectType>
+	<!-- 
+	<objectType connType="Oracle" id="invalid-function">
+		<node>
+			<icon RSKEY="OracleIcons.FUNCTION" />
+		</node>
+	</objectType>	
+	<objectType connType="Oracle" id="invalid-package">
+		<node>
+			<icon RSKEY="OracleIcons.PACKAGE" />
+		</node>
+	</objectType>
+	<objectType connType="Oracle" id="invalid-package-body">
+		<node>
+			<icon RSKEY="OracleIcons.PACKAGE" />
+		</node>
+	</objectType>
+	<objectType connType="Oracle" id="invalid-procedure">
+		<node>
+			<icon RSKEY="OracleIcons.PROCEDURE" />
+		</node>
+	</objectType>	
+	<objectType connType="Oracle" id="invalid-trigger">
+		<node>
+			<icon RSKEY="OracleIcons.TRIGGER" />
+		</node>
+	</objectType>	
+	<objectType connType="Oracle" id="invalid-type">
+		<node>
+			<icon RSKEY="OracleIcons.TYPE" />
+		</node>
+	</objectType>	
+	<objectType connType="Oracle" id="invalid-type-body">
+		<node>
+			<icon RSKEY="OracleIcons.TYPE" />
+		</node>
+	</objectType>	
+	<objectType connType="Oracle" id="invalid-view">
+		<node>
+			<icon RSKEY="OracleIcons.VIEW" />
+		</node>
+	</objectType>	
+	 -->	
+</navigator>
