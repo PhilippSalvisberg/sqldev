@@ -1,0 +1,25 @@
+<navigator RESOURCE_FILE="oracle.dbtools.raptor.navigator.OracleNavigatorResource">
+	<objectType connType="Oracle" id="flat-invalid-objects-root" weight="203">
+		<folder>
+			<!-- see oracle.javatools.icons.OracleIcons.class in modules/oracle.javatools/oracle.javatools/oicons.jar -->
+			<icon RSKEY="OracleIcons.OVERLAY_INVALID"></icon>
+			<!-- RSKEY should reference a resource in the bundle, however it works, but throws error in log -->
+			<label RSKEY="Invalid Objects (flat)"/>
+			<queries>
+				<query>
+					<sql  constrained="true">
+						<![CDATA[
+SELECT object_name AS name, 
+       object_type AS type,    -- leads to correct node type
+       object_type,            -- ignored
+       object_type AS dummy    -- additional bind
+  FROM user_objects
+ WHERE status = 'INVALID'
+ ORDER by object_type, object_name
+						]]>
+					</sql>
+				</query>
+			</queries>
+		</folder>
+	</objectType>
+</navigator>
