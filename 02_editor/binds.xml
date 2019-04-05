@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<displays>
+	<display type="editor" style="Table" enable="true" objectType="flat-invalid-objects-root,VIEW">
+		<name><![CDATA[Binds]]></name>
+		<description><![CDATA[]]></description>
+		<tooltip><![CDATA[]]></tooltip>
+		<drillclass><![CDATA[]]></drillclass>
+		<CustomValues>
+			<TYPE><![CDATA[vertical]]></TYPE>
+		</CustomValues>
+		<query>
+			<sql>
+				<![CDATA[
+select :CATALOG as catalog,
+       :COLUMN_NAME as column_name,
+       :CONNECTION_NAME as connection_name,
+       :OBJECT_FOLDER_TYPE as object_folder_type,
+       :OBJECT_ID as object_id,
+       :OBJECT_NAME as object_name,
+       :OBJECT_OWNER as object_owner,
+       :OBJECT_TYPE as object_type,
+       :DUMMY as dummy,
+       :SCHEMA as schema,
+       :TYPE as type
+  from dual
+ 				]]>
+			</sql>
+		</query>
+	</display>
+</displays>
