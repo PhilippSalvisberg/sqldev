@@ -18,7 +18,7 @@ var tab = '"' + OBJECT_OWNER + '"."' + OBJECT_NAME + '"';
 var sql = 'create table ' + prompt0 + ' as select * from ' + tab;
 if (prompt1 != '100') {
 	if (prompt2 == 'No') {
-	    var sqlCount = 'select to_char(count(*) * to_number(:percent) / 100) AS col from ' + tab;
+		var sqlCount = 'select to_char(count(*) * to_number(:percent) / 100) AS col from ' + tab;
 		var map = new java.util.HashMap();
 		map.put('percent', prompt1);
 		var count = dbutil.executeReturnOneCol(sqlCount, map);
