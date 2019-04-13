@@ -23,7 +23,6 @@ Save the following content to a XML file named `drinks-navigator.xml`.
 SELECT 'Alcoholic' AS name, 'ALCOHOLIC' AS value FROM dual
 UNION ALL
 SELECT 'Non-Alcoholic' AS name, 'NON-ALCOHOLIC' AS value FROM dual
-
 						]]>
 					</sql>
 				</query>
