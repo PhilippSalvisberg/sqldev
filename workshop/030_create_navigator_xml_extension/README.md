@@ -202,10 +202,8 @@ SELECT 'Sprite' AS name, 'SPRITE' as value
 	</objectType>	
 </navigator>
 ```
+See [navigator.xsd](https://github.com/oracle/oracle-db-examples/blob/master/sqldeveloper/extension/xml/schema/navigator.xsd) for more information about the XML structure.
 
-The file is based on the report created in the previous tutorial. 
-
-The change in the node `display` from `type=""` to `type="editor"` makes a report an editor. The attribute `objectType` defines the scope of an editor. 
 
 ## 3. Configure the XML Extension
 
