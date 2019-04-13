@@ -37,7 +37,7 @@ select * from all_objects
 
 The file is based on the report created in the previous tutorial. 
 
-The change in in the node `display` from `type=""` to `type="editor"` makes a report an editor. The attribute `objectType` defines the scope of an editor. 
+The change in the node `display` from `type=""` to `type="editor"` makes a report an editor. The attribute `objectType` defines the scope of an editor. 
 
 ## 3. Configure the XML Extension
 
