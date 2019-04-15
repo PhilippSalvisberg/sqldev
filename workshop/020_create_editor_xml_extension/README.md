@@ -49,7 +49,7 @@ In the preferences dialog click on `User Defined Extensions` under the `Database
 
 ![Preferences](./images/preferences.png)
 
-Press the `Add Row` button and select `ACTION` in the type field and browse for the previously saved `properties.xml`.
+Press the `Add Row` button and select `EDITOR` in the type field and browse for the previously saved `properties.xml`.
 
 ![Preferences](./images/preferences2.png)
 
