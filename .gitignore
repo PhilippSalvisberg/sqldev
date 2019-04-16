@@ -28,3 +28,7 @@ hs_err_pid*
 
 # Windows
 Thumbs.db
+
+# Targets
+**/target
+**/bin
