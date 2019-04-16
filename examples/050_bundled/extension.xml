@@ -1,0 +1,37 @@
+<extension id="com.salvis.plscope.sqldev" version="#EXTENSION_VERSION#" esdk-version="1.0"
+	xmlns="http://jcp.org/jsr/198/extension-manifest" rsbundle-class="com.trivadis.sqldev.example50.ExampleResources">
+	<name rskey="EXTENSION_NAME" />
+	<owner rskey="EXTENSION_OWNER" />
+
+	<!-- features may be used to enable/disable extensions without uninstalling them -->
+	<feature id="com.trivadis.sqldev.example50" xmlns="http://xmlns.oracle.com/ide/extension">
+		<category-id>db-category</category-id>
+		<name>#EXTENSION_NAME#</name>
+		<description><![CDATA[#EXTENSION_DESCRIPTION#]]></description>
+		<type>
+			<service can-user-disable="true" reload-if-used="true" />
+		</type>
+	</feature>
+
+	<!-- register actions, navigator nodes and reports -->
+	<trigger-hooks xmlns="http://xmlns.oracle.com/ide/extension">
+		<triggers xmlns:c="http://xmlns.oracle.com/ide/customization">
+			<sqldev-action-hook xmlns="http://xmlns.oracle.com/sqldeveloper/sqldev-actions">
+				<actionDescriptor package="com.trivadis.sqldev.example50.action" />
+			</sqldev-action-hook>
+			<sqldev-navigator-hook xmlns="http://xmlns.oracle.com/sqldeveloper/sqldev-navigator">
+				<descriptor>/com/trivadis/sqldev/example50/navigator/drinks-navigator.xml</descriptor>
+			</sqldev-navigator-hook>
+			<sqldev-reports-hook xmlns="http://xmlns.oracle.com/sqldeveloper/sqldev-reports">
+				<report package="/com/trivadis/sqldev/example50/report" />
+			</sqldev-reports-hook>
+		</triggers>
+	</trigger-hooks>
+
+	<!-- register views (editors) -->
+	<hooks>
+		<sqldev-viewer-hook xmlns="http://xmlns.oracle.com/sqldeveloper/sqldev-viewers">
+			<viewerDescriptor package="com.trivadis.sqldev.example50.editor" />
+		</sqldev-viewer-hook>
+	</hooks>
+</extension>

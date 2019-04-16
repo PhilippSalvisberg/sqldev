@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<displays>
+	<display type="editor" style="Table" enable="true" 
+		objectType="DIRECTORY,FUNCTION,INDEX,JOB,MATERIALIZED VIEW,MATERIALIZED VIEW LOG,OPERATOR,PACKAGE,PACKAGE BODY,PROCEDURE,QUEUE,SYNONYM,RECYCLEBIN,TABLE,TRIGGER,TYPE,TYPE BODY,VIEW">
+		<name><![CDATA[Properties]]></name>
+		<description><![CDATA[]]></description>
+		<tooltip><![CDATA[]]></tooltip>
+		<drillclass><![CDATA[]]></drillclass>
+		<CustomValues>
+			<TYPE><![CDATA[vertical]]></TYPE>
+		</CustomValues>
+		<query>
+			<sql>
+				<![CDATA[
+select * from all_objects
+ where owner = :OBJECT_OWNER
+   and (object_type = :OBJECT_TYPE OR :OBJECT_TYPE IS NULL)
+   and (object_name = :OBJECT_NAME OR :OBJECT_NAME IS NULL) 
+ order by owner, object_type, object_name
+ 				]]>
+			</sql>
+		</query>
+	</display>
+</displays>
