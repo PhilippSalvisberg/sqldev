@@ -1,0 +1,189 @@
+<navigator RESOURCE_FILE="com.trivadis.sqldev.example52.ExampleResources">
+	<objectType connType="Oracle" id="drinks-root" weight="203">
+		<folder>
+			<icon RSKEY="DRINKS_ICON"></icon>
+			<label RSKEY="DRINKS_LABEL_NAME"/>
+			<queries>
+				<query>
+					<sql  constrained="true">
+						<![CDATA[
+SELECT 'Alcoholic' AS name, 'ALCOHOLIC' AS value FROM dual
+UNION ALL
+SELECT 'Non-Alcoholic' AS name, 'NON-ALCOHOLIC' AS value FROM dual
+						]]>
+					</sql>
+				</query>
+			</queries>
+		</folder>
+		<node>
+			<icon RSKEY="DRINKS_GROUP_ICON"></icon>
+			<childType id="beer-folder" nodeType="beer-folder">
+				<queries>
+					<query>
+						<sql>
+							<![CDATA[
+SELECT 'Beer' AS name, 'BEER' as value 
+  FROM dual
+ WHERE :VALUE = 'ALCOHOLIC'
+								]]>
+						</sql>
+					</query>
+				</queries>
+			</childType>
+			<childType id="cider-folder" nodeType="cider-folder">
+				<queries>
+					<query>
+						<sql>
+							<![CDATA[
+SELECT 'Cider' AS name, 'CIDER' as value 
+  FROM dual
+ WHERE :VALUE = 'ALCOHOLIC'
+								]]>
+						</sql>
+					</query>
+				</queries>
+			</childType>
+			<childType id="distilled-folder" nodeType="distilled-folder">
+				<queries>
+					<query>
+						<sql>
+							<![CDATA[
+SELECT 'Distilled' AS name, 'DISTILLED' as value 
+  FROM dual
+ WHERE :VALUE = 'ALCOHOLIC'
+								]]>
+						</sql>
+					</query>
+				</queries>
+			</childType>
+			<childType id="hard-soda-folder" nodeType="hard-soda-folder">
+				<queries>
+					<query>
+						<sql>
+							<![CDATA[
+SELECT 'Hard soda' AS name, 'HARD SODA' as value 
+  FROM dual
+ WHERE :VALUE = 'ALCOHOLIC'
+								]]>
+						</sql>
+					</query>
+				</queries>
+			</childType>
+			<childType id="wine-folder" nodeType="wine-folder">
+				<queries>
+					<query>
+						<sql>
+							<![CDATA[
+SELECT 'Wine' AS name, 'WINE' as value 
+  FROM dual
+ WHERE :VALUE = 'ALCOHOLIC'
+								]]>
+						</sql>
+					</query>
+				</queries>
+			</childType>
+			<childType id="caffeinated-folder" nodeType="caffeinated-folder">
+				<queries>
+					<query>
+						<sql>
+							<![CDATA[
+SELECT 'Caffeinated' AS name, 'CAFFEINATED' as value 
+  FROM dual
+ WHERE :VALUE = 'NON-ALCOHOLIC'
+								]]>
+						</sql>
+					</query>
+				</queries>
+			</childType>
+			<childType id="chocolate-folder" nodeType="chocolate-folder">
+				<queries>
+					<query>
+						<sql>
+							<![CDATA[
+SELECT 'Chocolate' AS name, 'CHOCOLATE' as value 
+  FROM dual
+ WHERE :VALUE = 'NON-ALCOHOLIC'
+								]]>
+						</sql>
+					</query>
+				</queries>
+			</childType>
+			<childType id="soft-drinks-folder" nodeType="soft-drinks-folder">
+				<queries>
+					<query>
+						<sql>
+							<![CDATA[
+SELECT 'Soft drinks' AS name, 'SOFT DRINKS' as value 
+  FROM dual
+ WHERE :VALUE = 'NON-ALCOHOLIC'
+								]]>
+						</sql>
+					</query>
+				</queries>
+			</childType>
+		</node>
+	</objectType>
+	<objectType connType="Oracle" id="beer-folder">
+		<node>
+			<icon RSKEY="BEER_ICON" />
+		</node>
+	</objectType>	
+	<objectType connType="Oracle" id="cider-folder">
+		<node>
+			<icon RSKEY="CIDER_ICON" />
+		</node>
+	</objectType>
+	<objectType connType="Oracle" id="distilled-folder">
+		<node>
+			<icon RSKEY="DISTILLED_ICON" />
+		</node>
+	</objectType>
+	<objectType connType="Oracle" id="hard-soda-folder">
+		<node>
+			<icon RSKEY="HARD_SODA_ICON" />
+		</node>
+	</objectType>	
+	<objectType connType="Oracle" id="wine-folder">
+		<node>
+			<icon RSKEY="WINE_ICON" />
+		</node>
+	</objectType>	
+	<objectType connType="Oracle" id="caffeinated-folder">
+		<node>
+			<icon RSKEY="CAFFEINATED_ICON" />
+		</node>
+	</objectType>	
+	<objectType connType="Oracle" id="chocolate-folder">
+		<node>
+			<icon RSKEY="COCOLATE_ICON" />
+		</node>
+	</objectType>	
+	<objectType connType="Oracle" id="soft-drinks-folder">
+		<node>
+			<icon RSKEY="SOFT_DRINK_FOLDER_ICON" />
+			<childType id="soft-drinks" nodeType="soft-drinks">
+				<queries>
+					<query>
+						<sql>
+							<![CDATA[
+SELECT 'Cola' AS name, 'COLA' as value 
+  FROM dual
+UNION ALL
+SELECT 'Fanta' AS name, 'FANTA' as value 
+  FROM dual
+UNION ALL
+SELECT 'Sprite' AS name, 'SPRITE' as value 
+  FROM dual
+		 					]]>
+						</sql>					
+					</query>
+				</queries>
+			</childType>
+		</node>
+	</objectType>
+	<objectType connType="Oracle" id="soft-drinks">
+		<node>
+			<icon RSKEY="SOFT_DRINK_ICON" />
+		</node>
+	</objectType>	
+</navigator>

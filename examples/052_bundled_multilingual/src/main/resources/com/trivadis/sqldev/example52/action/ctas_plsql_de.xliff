@@ -1,0 +1,35 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<xliff version="1.1">
+   <file original="ctas_plsql.xml" source-language="en-US" datatype="SQLDeveloper" target-language="de-DE">
+      <body>
+         <trans-unit id="title">
+            <source>Create Table as Select...</source>
+            <target>Erstelle Tabelle via Select...</target>
+         </trans-unit>
+         <trans-unit id="prompt1">
+            <source>New Table Name</source>
+            <target>Neuer Name</target>
+         </trans-unit>
+         <trans-unit id="prompt2">
+            <source>Rows in Percent</source>
+            <target>Zeilen in Prozent</target>
+         </trans-unit>
+         <trans-unit id="prompt3">
+            <source>Sample Data (Random)?</source>
+            <target>Beispieldaten (zufällig)?</target>
+         </trans-unit>
+         <trans-unit id="prompt3_lov">
+            <source><![CDATA[STATIC:No:Yes]]></source>
+            <target><![CDATA[STATIC:Nein:Ja]]></target>
+         </trans-unit>
+         <trans-unit id="help">
+            <source>Copy a table. Completely or a chosen subset in percent.</source>
+            <target>Kopieren einer Tabelle. Komplett oder eine ausgewählte Teilmenge in Prozent.</target>
+         </trans-unit>
+         <trans-unit id="confirmation">
+            <source>Table "#OBJECT_NAME#" has been copied to #0#.</source>
+            <target>Die Tabelle "#OBJECT_NAME#" wurde nach #0# kopiert.</target>
+         </trans-unit>
+      </body>
+   </file>
+</xliff>
