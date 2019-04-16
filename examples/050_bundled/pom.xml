@@ -11,7 +11,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<!-- SQL Developer versions 4.1 to 19.1 use JDK8 -->
 		<jdk.version>1.8</jdk.version>
-		<!-- for macOS sqldev.base = /Applications/SQLDeveloper19.1.0.app/Contents/Resources/sqldeveloper -->
+		<!-- for macOS -Dsqldev.basedir=/Applications/SQLDeveloper19.1.0.app/Contents/Resources/sqldeveloper -->
 		<sqldev.basedir>C:/app/sqldeveloper19.1.0</sqldev.basedir>
 		<final.name>Example50_for_SQLDev_${project.version}</final.name>
 	</properties>
