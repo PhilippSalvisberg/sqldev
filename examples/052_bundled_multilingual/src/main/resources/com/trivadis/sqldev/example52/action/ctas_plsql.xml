@@ -19,7 +19,7 @@ declare
    l_count integer;
 begin
    if '#1#' != '100' then
-      if '#2#' IN ('No', 'Nein') then
+      if '#2#' = 'No' then
          select count(*) * #1# / 100 into l_count from "#OBJECT_OWNER#"."#OBJECT_NAME#";
          l_sql := l_sql || ' where rownum <= ' || l_count;
       else
