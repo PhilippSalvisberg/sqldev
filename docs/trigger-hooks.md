@@ -1,6 +1,6 @@
 # Trigger Hooks
 
-This document is a manual transformation of the deleted webpage https://java.net/projects/jdev-extensions/pages/Trigger-hooks created by John Brock.
+This document is a manual transformation of the deleted webpage https://java.net/projects/jdev-extensions/pages/Trigger-hooks created by [John Brock](https://github.com/peppertech).
 
 **Table of Contents** 
 
