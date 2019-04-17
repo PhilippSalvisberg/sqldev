@@ -18,10 +18,6 @@
             <source>Sample Data (Random)?</source>
             <target>Beispieldaten (zufällig)?</target>
          </trans-unit>
-         <trans-unit id="prompt3_lov">
-            <source><![CDATA[STATIC:No:Yes]]></source>
-            <target><![CDATA[STATIC:Nein:Ja]]></target>
-         </trans-unit>
          <trans-unit id="help">
             <source>Copy a table. Completely or a chosen subset in percent.</source>
             <target>Kopieren einer Tabelle. Komplett oder eine ausgewählte Teilmenge in Prozent.</target>
