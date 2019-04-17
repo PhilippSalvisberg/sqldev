@@ -1242,6 +1242,6 @@ Note that TextNodeHistorian registrations are implicit for registered TextNode t
  </trigger-hooks
 ```
 
-**Availability:* Available
+**Availability:** Available
 
 **XSD:** externaltools-hook.xsd
