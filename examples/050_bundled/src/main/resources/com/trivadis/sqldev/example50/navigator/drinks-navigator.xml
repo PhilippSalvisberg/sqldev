@@ -2,7 +2,7 @@
 	<objectType connType="Oracle" id="drinks-root" weight="203">
 		<folder>
 			<icon RSKEY="DRINKS_ICON"></icon>
-			<label RSKEY="DRINKS_LABEL_NAME"/>
+			<label RSKEY="DRINKS_LABEL"/>
 			<queries>
 				<query>
 					<sql  constrained="true">
