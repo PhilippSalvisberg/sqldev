@@ -1,0 +1,11 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<xliff version="1.1">
+   <file original="properties.xml" source-language="en-US" datatype="SQLDeveloper" target-language="de-DE">
+      <body>
+         <trans-unit id="name">
+            <source>Properties</source>
+            <target>Eigenschaften</target>
+         </trans-unit>
+      </body>
+   </file>
+</xliff>

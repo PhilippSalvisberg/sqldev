@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<xliff version="1.1">
+   <file original="drinks-editors.xml" source-language="en-US" datatype="SQLDeveloper" target-language="de-DE">
+      <body>
+         <trans-unit id="displays_display_name_1">
+            <source>Nutrition 100ml</source>
+            <target>Nährwertangaben 100ml</target>
+         </trans-unit>
+         <trans-unit id="displays_display_name_2">
+            <source>Ingredients</source>
+            <target>Zutaten</target>
+         </trans-unit>
+      </body>
+   </file>
+</xliff>
