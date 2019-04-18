@@ -9,12 +9,33 @@
 	<packaging>bundle</packaging>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<!-- SQL Developer versions 4.1 to 19.1 use JDK8 -->
 		<jdk.version>1.8</jdk.version>
-		<!-- for macOS -Dsqldev.basedir=/Applications/SQLDeveloper19.1.0.app/Contents/Resources/sqldeveloper -->
-		<sqldev.basedir>C:/app/sqldeveloper19.1.0</sqldev.basedir>
 		<final.name>Example52_for_SQLDev_${project.version}</final.name>
 	</properties>
+	<profiles>
+		<profile>
+			<id>windows</id>
+			<activation>
+				<os>
+					<family>Windows</family>
+				</os>
+			</activation>
+			<properties>
+				<sqldev.basedir>C:/app/sqldeveloper19.1.0</sqldev.basedir>
+			</properties>
+		</profile>
+		<profile>
+			<id>macos</id>
+			<activation>
+				<os>
+					<family>mac</family>
+				</os>
+			</activation>
+			<properties>
+				<sqldev.basedir>/Applications/SQLDeveloper19.1.0.app/Contents/Resources/sqldeveloper</sqldev.basedir>
+			</properties>
+		</profile>
+	</profiles>
 	<dependencies>
 		<!-- SQL Developer dependencies not available in public Maven repositories -->
 		<dependency>
