@@ -1,4 +1,4 @@
-<extension id="com.trivadis.sqldev.example52" version="#EXTENSION_VERSION#" esdk-version="1.0"
+<extension id="com.trivadis.sqldev.example52" version="#EXTENSION_VERSION#" esdk-version="2.0"
 	xmlns="http://jcp.org/jsr/198/extension-manifest" rsbundle-class="com.trivadis.sqldev.example52.ExampleResources">
 	<name rskey="EXTENSION_NAME" />
 	<owner rskey="EXTENSION_OWNER" />
