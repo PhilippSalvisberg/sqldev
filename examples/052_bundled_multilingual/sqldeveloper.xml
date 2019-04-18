@@ -6,6 +6,6 @@
 		<u:author>#EXTENSION_OWNER#</u:author>
 		<u:author-url>https://github.com/PhilippSalvisberg/plscope-utils/</u:author-url>
 		<u:description><![CDATA[#EXTENSION_DESCRIPTION#]]></u:description>
-		<u:bundle-url>http://path-to-zip-file</u:bundle-url>
+		<u:bundle-url>http://.../#EXTENSION_DEPLOYABLE#</u:bundle-url>
 	</u:update>
 </updates>
