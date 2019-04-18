@@ -5,5 +5,8 @@
 		<u:author>#EXTENSION_OWNER#</u:author>
 		<u:author-url>https://www.salvis.com/blog/</u:author-url>
 		<u:description><![CDATA[#EXTENSION_DESCRIPTION#]]></u:description>
+		<u:requirements>
+			<u:requires-extension id="oracle.sqldeveloper" minVersion="#MIN_SQLDEV_VERSION#"/>
+		</u:requirements>
 	</u:update>
 </update-bundle>

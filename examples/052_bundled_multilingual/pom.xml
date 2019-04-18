@@ -178,6 +178,10 @@
 							<token>#EXTENSION_OWNER#</token>
 							<value>${EXTENSION_OWNER}</value>
 						</replacement>
+						<replacement>
+							<token>#MIN_SQLDEV_VERSION#</token>
+							<value>${MIN_SQLDEV_VERSION}</value>
+						</replacement>
 					</replacements>
 				</configuration>
 			</plugin>
