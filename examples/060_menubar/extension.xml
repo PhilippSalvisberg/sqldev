@@ -1,0 +1,213 @@
+<extension id="com.trivadis.sqldev.example60" version="#EXTENSION_VERSION#" esdk-version="2.0"
+	xmlns="http://jcp.org/jsr/198/extension-manifest" rsbundle-class="com.trivadis.sqldev.example60.ExampleResources">
+	<name rskey="EXTENSION_NAME" />
+	<owner rskey="EXTENSION_OWNER" />
+
+	<!-- features may be used to enable/disable extensions without uninstalling them -->
+	<feature id="com.trivadis.sqldev.example60" xmlns="http://xmlns.oracle.com/ide/extension">
+		<category-id>db-category</category-id>
+		<name>#EXTENSION_NAME#</name>
+		<description><![CDATA[#EXTENSION_DESCRIPTION#]]></description>
+		<type>
+			<service can-user-disable="true" reload-if-used="true" />
+		</type>
+	</feature>
+
+	<!-- register actions, controllers and menu items -->
+	<trigger-hooks xmlns="http://xmlns.oracle.com/ide/extension">
+		<triggers xmlns:c="http://xmlns.oracle.com/ide/customization">
+			<actions xmlns="http://xmlns.oracle.com/jdeveloper/1013/extension">
+				<action id="EXAMPLE_FILE_MENU_1_ACTION_ID">
+					<properties>
+						<property name="Name">${EXAMPLE_FILE_MENU_1_LABEL}</property>
+					</properties>
+				</action>
+				<action id="EXAMPLE_EDIT_MENU_1_ACTION_ID">
+					<properties>
+						<property name="Name">${EXAMPLE_EDIT_MENU_1_LABEL}</property>
+					</properties>
+				</action>
+				<action id="EXAMPLE_VIEW_MENU_1_ACTION_ID">
+					<properties>
+						<property name="Name">${EXAMPLE_VIEW_MENU_1_LABEL}</property>
+						<property name="SmallIcon">res:${ONE_ICON}</property>
+					</properties>
+				</action>
+				<action id="EXAMPLE_VIEW_MENU_2_ACTION_ID">
+					<properties>
+						<property name="Name">${EXAMPLE_VIEW_MENU_2_LABEL}</property>
+						<property name="SmallIcon">res:${TWO_ICON}</property>
+					</properties>
+				</action>
+				<action id="EXAMPLE_VIEW_MENU_3_ACTION_ID">
+					<properties>
+						<property name="Name">${EXAMPLE_VIEW_MENU_3_LABEL}</property>
+						<property name="SmallIcon">res:${THREE_ICON}</property>
+					</properties>
+				</action>
+				<action id="EXAMPLE_NAVIGATE_MENU_1_ACTION_ID">
+					<properties>
+						<property name="Name">${EXAMPLE_NAVIGATE_MENU_1_LABEL}</property>
+					</properties>
+				</action>
+				<action id="EXAMPLE_RUN_MENU_1_ACTION_ID">
+					<properties>
+						<property name="Name">${EXAMPLE_RUN_MENU_1_LABEL}</property>
+					</properties>
+				</action>
+				<action id="EXAMPLE_TEAM_MENU_1_ACTION_ID">
+					<properties>
+						<property name="Name">${EXAMPLE_TEAM_MENU_1_LABEL}</property>
+					</properties>
+				</action>
+				<action id="EXAMPLE_TOOLS_MENU_1_ACTION_ID">
+					<properties>
+						<property name="Name">${EXAMPLE_TOOLS_MENU_1_LABEL}</property>
+					</properties>
+				</action>
+				<action id="EXAMPLE_WINDOW_MENU_1_ACTION_ID">
+					<properties>
+						<property name="Name">${EXAMPLE_WINDOW_MENU_1_LABEL}</property>
+					</properties>
+				</action>
+				<action id="EXAMPLE_HELP_MENU_1_ACTION_ID">
+					<properties>
+						<property name="Name">${EXAMPLE_HELP_MENU_1_LABEL}</property>
+					</properties>
+				</action>
+				<action id="EXAMPLE_CUSTOM_MENU_1_ACTION_ID">
+					<properties>
+						<property name="Name">${EXAMPLE_CUSTOM_MENU_1_LABEL}</property>
+						<property name="SmallIcon">res:${ONE_ICON}</property>
+					</properties>
+				</action>
+				<action id="EXAMPLE_CUSTOM_MENU_2_ACTION_ID">
+					<properties>
+						<property name="Name">${EXAMPLE_CUSTOM_MENU_2_LABEL}</property>
+					</properties>
+				</action>
+				<action id="EXAMPLE_CUSTOM_MENU_3_ACTION_ID">
+					<properties>
+						<property name="Name">${EXAMPLE_CUSTOM_MENU_3_LABEL}</property>
+					</properties>
+				</action>
+				<action id="EXAMPLE_CUSTOM_SUBMENU_1_ACTION_ID">
+					<properties>
+						<property name="Name">${EXAMPLE_CUSTOM_SUBMENU_1_LABEL}</property>
+					</properties>
+				</action>
+				<action id="EXAMPLE_CUSTOM_SUBMENU_2_ACTION_ID">
+					<properties>
+						<property name="Name">${EXAMPLE_CUSTOM_SUBMENU_2_LABEL}</property>
+					</properties>
+				</action>
+				<action id="EXAMPLE_CUSTOM_SUBMENU_3_ACTION_ID">
+					<properties>
+						<property name="Name">${EXAMPLE_CUSTOM_SUBMENU_3_LABEL}</property>
+						<property name="SmallIcon">res:${THREE_ICON}</property>
+					</properties>
+				</action>
+			</actions>
+			<controllers xmlns="http://xmlns.oracle.com/ide/extension">
+				<controller class="com.trivadis.sqldev.example60.ExampleController">
+					<update-rules>
+						<update-rule rule="always-enabled">
+							<action id="EXAMPLE_FILE_MENU_1_ACTION_ID" />
+							<action id="EXAMPLE_EDIT_MENU_1_ACTION_ID" />
+							<action id="EXAMPLE_VIEW_MENU_1_ACTION_ID" />
+							<action id="EXAMPLE_VIEW_MENU_2_ACTION_ID" />
+							<action id="EXAMPLE_VIEW_MENU_3_ACTION_ID" />
+							<action id="EXAMPLE_NAVIGATE_MENU_1_ACTION_ID" />
+							<action id="EXAMPLE_RUN_MENU_1_ACTION_ID" />
+							<action id="EXAMPLE_TEAM_MENU_1_ACTION_ID" />
+							<action id="EXAMPLE_TOOLS_MENU_1_ACTION_ID" />
+							<action id="EXAMPLE_WINDOW_MENU_1_ACTION_ID" />
+							<action id="EXAMPLE_HELP_MENU_1_ACTION_ID" />
+							<action id="EXAMPLE_CUSTOM_MENU_1_ACTION_ID" />
+							<action id="EXAMPLE_CUSTOM_MENU_2_ACTION_ID" />
+							<action id="EXAMPLE_CUSTOM_MENU_3_ACTION_ID" />
+							<action id="EXAMPLE_CUSTOM_SUBMENU_1_ACTION_ID" />
+							<action id="EXAMPLE_CUSTOM_SUBMENU_2_ACTION_ID" />
+							<action id="EXAMPLE_CUSTOM_SUBMENU_3_ACTION_ID" />
+						</update-rule>
+					</update-rules>
+				</controller>
+			</controllers>
+			<menu-hook xmlns="http://jcp.org/jsr/198/extension-manifest">
+				<menus>
+					<menubar id="javax.ide.view.MAIN_WINDOW_MENUBAR_ID">
+						<menu id="javax.ide.FILE_MENU_ID">
+							<section id="EXAMPLE_FILE_MENU_SECTION_ID" weight="100.0f">
+								<item action-ref="EXAMPLE_FILE_MENU_1_ACTION_ID" />						
+							</section>
+						</menu>
+						<menu id="javax.ide.EDIT_MENU_ID">
+							<section id="javax.ide.COPY_PASTE_SECTION_ID">
+								<item action-ref="EXAMPLE_EDIT_MENU_1_ACTION_ID" />						
+							</section>
+						</menu>
+						<menu id="javax.ide.VIEW_MENU_ID">
+							<section id="EXAMPLE_VIEW_MENU_SECTION_ID" weight="0.3f">
+								<item action-ref="EXAMPLE_VIEW_MENU_1_ACTION_ID" weight="10.0f" />
+								<item action-ref="EXAMPLE_VIEW_MENU_2_ACTION_ID" weight="20.0f" />
+								<item action-ref="EXAMPLE_VIEW_MENU_3_ACTION_ID" weight="30.0f" />
+							</section>
+						</menu>
+						<menu id="Navigate">
+							<section id="EXAMPLE_NAVIGATE_MENU_SECTION_ID" weight="0.0f">
+								<item action-ref="EXAMPLE_NAVIGATE_MENU_1_ACTION_ID" />				
+							</section>
+						</menu>
+						<menu id="Run">
+							<section id="EXAMPLE_NAVIGATE_MENU_SECTION_ID" weight="0.0f">
+								<item action-ref="EXAMPLE_RUN_MENU_1_ACTION_ID" />				
+							</section>
+						</menu>
+						<menu id="VERSIONING_MENU">
+							<section id="VERSIONING_MENU_SECTION_CONNECT">
+								<item action-ref="EXAMPLE_TEAM_MENU_1_ACTION_ID" />				
+							</section>
+						</menu>
+						<menu id="Tools">
+							<section id="EXAMPLE_TOOLS_MENU_SECTION_ID" weight="0.0f">
+								<item action-ref="EXAMPLE_TOOLS_MENU_1_ACTION_ID" />				
+							</section>
+						</menu>
+						<menu id="Window">
+							<section id="EXAMPLE_WINDOW_MENU_SECTION_ID" weight="0.0f">
+								<item action-ref="EXAMPLE_WINDOW_MENU_1_ACTION_ID" />				
+							</section>
+						</menu>
+						<menu id="Help">
+							<section id="EXAMPLE_HELP_MENU_SECTION_ID" weight="0.0f">
+								<item action-ref="EXAMPLE_HELP_MENU_1_ACTION_ID" />				
+							</section>
+						</menu>
+						<menu id="EXAMPLE_CUSTOM_MENU_ID" weight="2.0f">
+							<label>${EXAMPLE_CUSTOM_MENU_LABEL}</label>
+							<section id="EXAMPLE_CUSTOM_MENU_SECTION_1_ID" weight="10.0f">
+								<item action-ref="EXAMPLE_CUSTOM_MENU_1_ACTION_ID" />	
+								<item action-ref="EXAMPLE_CUSTOM_MENU_2_ACTION_ID" />	
+								<item action-ref="EXAMPLE_CUSTOM_MENU_3_ACTION_ID" />	
+							</section>
+							<section id="EXAMPLE_CUSTOM_MENU_SECTION_2_ID" weight="20.0f">
+								<menu id="EXAMPLE_CUSTOM_SUBMENU_ID" weight="2.0f">
+									<label>${EXAMPLE_CUSTOM_SUBMENU_LABEL}</label>
+									<iconpath>/com/trivadis/sqldev/example60/images/two.png</iconpath>
+									<section id="EXAMPLE_CUSTOM_SUBMENU_SECTION_ID" weight="10.0f">
+										<item action-ref="EXAMPLE_CUSTOM_SUBMENU_1_ACTION_ID" />	
+										<item action-ref="EXAMPLE_CUSTOM_SUBMENU_2_ACTION_ID" />	
+										<item action-ref="EXAMPLE_CUSTOM_SUBMENU_3_ACTION_ID" />	
+									</section>
+								</menu>
+							</section>
+						</menu>
+					</menubar>
+				</menus>
+			</menu-hook>
+			<accelerator-hook>
+				<file>com/trivadis/sqldev/example60/accelerators.xml</file>
+			</accelerator-hook>
+		</triggers>
+	</trigger-hooks>
+</extension>

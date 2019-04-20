@@ -1,0 +1,12 @@
+<context scope="global">
+     <preset name="Default">
+          <map action="EXAMPLE_CUSTOM_SUBMENU_3_ACTION_ID">
+               <accel>control shift A</accel>
+          </map>
+     </preset>
+     <preset name="Default MacOS X">
+          <map action="EXAMPLE_CUSTOM_SUBMENU_3_ACTION_ID">
+               <accel>meta shift W</accel>
+          </map>
+     </preset>
+</context>
