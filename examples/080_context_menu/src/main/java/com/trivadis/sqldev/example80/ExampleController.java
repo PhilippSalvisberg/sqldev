@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.logging.Logger;
 
+import javax.swing.JEditorPane;
 import javax.swing.JOptionPane;
 
 import oracle.dbtools.raptor.utils.Connections;
@@ -11,14 +12,14 @@ import oracle.ide.Context;
 import oracle.ide.Ide;
 import oracle.ide.controller.Controller;
 import oracle.ide.controller.IdeAction;
+import oracle.ide.editor.Editor;
 import oracle.javatools.db.DBException;
 
 public class ExampleController implements Controller {
 
-	static final Logger logger = Logger.getLogger(ExampleController.class.getName());
+	private static final Logger logger = Logger.getLogger(ExampleController.class.getName());
 	private static final int EXAMPLE_CONTEXT_MENU_1_CMD_ID = Ide.findOrCreateCmdID("EXAMPLE_CONTEXT_MENU_1_ACTION_ID");
 	private static final int EXAMPLE_CONTEXT_MENU_2_CMD_ID = Ide.findOrCreateCmdID("EXAMPLE_CONTEXT_MENU_2_ACTION_ID");
-	
 	
 	public ExampleController() {
 		super();
@@ -35,19 +36,37 @@ public class ExampleController implements Controller {
 				this.context = context;
 			}
 			public void run() {
-				String connName = (String) context.getProperty("ObjectAction.CONN_NAME");
+				final String connName = (String) context.getProperty("ObjectAction.CONN_NAME");
+				Connections conns = null;
+				try {
+					 conns = Connections.getInstance();
+				} catch (Throwable e) {
+					// this happens with wrong/incomplete bundle dependencies/imports in pom.xml
+					logger.severe("Cannot get Connections. Got error " + e);
+					show("Connection " + connName + "\nGot error: " + e);
+					return;
+				}
+				String schema;
+				String password;
+				String customUrl;
 				String productName;
 				String productVersion;
-				logger.info("connName: " + connName);
+				logger.fine("connName: " + connName);
 				try {
-					Connection conn = Connections.getInstance().getConnection(connName);
+					Connection conn = conns.getConnection(connName);
 					productName = conn.getMetaData().getDatabaseProductName();
 					productVersion = conn.getMetaData().getDatabaseProductVersion();
+					schema = conn.getSchema();
+					password = conns.getConnectionInfo(connName).getProperty("password");
+					customUrl = conns.getConnectionInfo(connName).getProperty("customUrl");
 				} catch (DBException | SQLException e) {
 					logger.severe("got error: " + e);
-					throw new RuntimeException(e);
+					return;
 				}
-				String message = "Connected to " + productName + " " + productVersion + ".";
+				final String message = "Connected to "
+						+ schema + "/"+ password 
+						+ customUrl.substring(customUrl.indexOf("@")) + "\n\n" 
+						+ "using " + productName + " " + productVersion + ".";
 				show(message);
 			}
 		}
@@ -56,7 +75,16 @@ public class ExampleController implements Controller {
 	}
 		
 	private void handleEditor(Context context) {
-		show("Editor");		
+		final Editor editor = (Editor) context.getView();
+		final JEditorPane pane = (JEditorPane) editor.getDefaultFocusComponent();
+		final String text = pane.getText();
+		final int numChars = text.length();
+		final int numLines = text.split(System.getProperty("line.separator")).length;
+		final int pos = pane.getCaretPosition();
+		final String message = "Editor '" + editor.getTabDescription() + "'\n" 
+				+ "is at position " + pos + ".\n"
+				+ "Text has " + numChars + " characters and " + numLines + " lines."; 
+		show(message);
 	}
 
 	@Override
