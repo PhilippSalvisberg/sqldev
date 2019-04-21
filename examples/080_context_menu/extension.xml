@@ -13,7 +13,7 @@
 		</type>
 	</feature>
 
-	<!-- register actions, controllers and toolbar items -->
+	<!-- register rules, actions, controllers and context menu items -->
 	<trigger-hooks xmlns="http://xmlns.oracle.com/ide/extension">
 		<rules>
 			<rule id="example-dbnode-is-db-connection" type="context-has-element">
@@ -35,6 +35,7 @@
 					<properties>
 						<property name="Name">${EXAMPLE_CONTEXT_MENU_2_LABEL}</property>
 						<property name="SmallIcon">res:${TWO_ICON}</property>
+						<property name="Category">Code-Editor</property>
 					</properties>
 				</action>
 			</actions>
