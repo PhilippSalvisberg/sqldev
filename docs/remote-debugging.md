@@ -15,7 +15,7 @@ See `user.conf` property in the `Properties` tab of SQL Developer's `About` dial
 
 The option `suspend=y` would suspend SQL Developer during startup until the debugger connects. You do not want this, unless when debugging the startup process itself. `suspend=n` will allow to start SQL Developer normally. The debugger can connect and disconnect antime while SQL Developer is running. This is much more convenient and leads to less misunderstandings, because e.g. the SQL Developer does not seem to start because it is waiting for a debugging session.
 
-See [Java 8 Connection and Invocation Details]/(https://docs.oracle.com/javase/8/docs/technotes/guides/jpda/conninv.html)
+See [Java 8 Connection and Invocation Details](https://docs.oracle.com/javase/8/docs/technotes/guides/jpda/conninv.html)
 
 ## 2. Configure Remote Debug 
 
