@@ -35,16 +35,13 @@ The debuger will suspend the process when it reaches a breakpoint.
 
 ![Remote Debug Breakpoint](./images/remote_debug_breakpoint.png)
 
-Disconnect from SQL Developer when you've finished debugging.
+Disconnect from SQL Developer after debugging.
 
-![Disconnect from SQL Developer](./images/disconnect_debugger.png)
-
-
-You may resume all suspended processes and disconnect from 
+![Disconnect from SQL Developer](./images/disconnect_debugger.png) 
 
 ## 5. Stop SQL Developer
 
-Stop SQL Developer gracefully. Do not press the `Terminate` button in the Debugger to ensure you do not lose data.
+Stop the SQL Developer in the normal way. Do not press the `Terminate` button in the debugger to avoid data loss. 
 
 ## 6. Disable Debug in `product.conf`
 
