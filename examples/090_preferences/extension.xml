@@ -1,0 +1,78 @@
+<extension id="com.trivadis.sqldev.example90" version="#EXTENSION_VERSION#" esdk-version="2.0"
+	xmlns="http://jcp.org/jsr/198/extension-manifest" rsbundle-class="com.trivadis.sqldev.example90.ExampleResources">
+	<name rskey="EXTENSION_NAME" />
+	<owner rskey="EXTENSION_OWNER" />
+
+	<!-- features may be used to enable/disable extensions without uninstalling them -->
+	<feature id="com.trivadis.sqldev.example90" xmlns="http://xmlns.oracle.com/ide/extension">
+		<category-id>db-category</category-id>
+		<name>#EXTENSION_NAME#</name>
+		<description><![CDATA[#EXTENSION_DESCRIPTION#]]></description>
+		<type>
+			<service can-user-disable="true" reload-if-used="true" />
+		</type>
+	</feature>
+
+	<!-- register rules, actions, controllers and context menu items -->
+	<trigger-hooks xmlns="http://xmlns.oracle.com/ide/extension">
+		<rules>
+			<rule id="example-dbnode-is-db-connection" type="context-has-element">
+				<parameters>
+					<param name="element-class"
+						value="oracle.dbtools.raptor.navigator.db.DatabaseConnection" />
+				</parameters>
+			</rule>
+		</rules>
+		<triggers xmlns:c="http://xmlns.oracle.com/ide/customization">
+			<actions xmlns="http://xmlns.oracle.com/jdeveloper/1013/extension">
+				<action id="EXAMPLE_CONTEXT_MENU_1_ACTION_ID">
+					<properties>
+						<property name="Name">${EXAMPLE_CONTEXT_MENU_1_LABEL}</property>
+						<property name="SmallIcon">res:${ONE_ICON}</property>
+					</properties>
+				</action>
+				<action id="EXAMPLE_CONTEXT_MENU_2_ACTION_ID">
+					<properties>
+						<property name="Name">${EXAMPLE_CONTEXT_MENU_2_LABEL}</property>
+						<property name="SmallIcon">res:${TWO_ICON}</property>
+						<property name="Category">Code-Editor</property>
+					</properties>
+				</action>
+			</actions>
+			<controllers xmlns="http://xmlns.oracle.com/ide/extension">
+				<controller class="com.trivadis.sqldev.example90.ExampleController">
+					<update-rules>
+						<update-rule rule="always-enabled">
+							<action id="EXAMPLE_CONTEXT_MENU_1_ACTION_ID" />
+							<action id="EXAMPLE_CONTEXT_MENU_2_ACTION_ID" />
+						</update-rule>
+					</update-rules>
+				</controller>
+			</controllers>
+			<context-menu-hook rule="example-dbnode-is-db-connection">
+				<site idref="db_nav" />
+				<menu>
+					<section xmlns="http://jcp.org/jsr/198/extension-manifest"
+						id="EXAMPLE_CONTEXT_MENU_SECTION_ID" weight="0.1">
+						<item action-ref="EXAMPLE_CONTEXT_MENU_1_ACTION_ID" />
+					</section>
+				</menu>
+			</context-menu-hook>
+			<context-menu-hook rule="always-enabled">
+				<site idref="editor" />
+				<menu>
+					<section xmlns="http://jcp.org/jsr/198/extension-manifest"
+						id="EXAMPLE_CONTEXT_MENU_SECTION_ID" weight="0.1">
+						<item action-ref="EXAMPLE_CONTEXT_MENU_2_ACTION_ID" />
+					</section>
+				</menu>
+			</context-menu-hook>
+			<settings-ui-hook>
+				<page id="EXAMPLE_PREFERENCES_PAGE_ID" parent-idref="/preferences">
+					<label>${EXAMPLE_PREFERENCES_TITEL}</label>
+					<traversable-class>com.trivadis.sqldev.example90.PreferencePanel</traversable-class>
+				</page>
+			</settings-ui-hook>
+		</triggers>
+	</trigger-hooks>
+</extension>
