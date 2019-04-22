@@ -42,6 +42,5 @@ public class ExampleDockable extends DockableWindow {
 		panel = new JPanel(new BorderLayout());
 		panel.add(pane, BorderLayout.CENTER);
 	}
-	
-	
+
 }
