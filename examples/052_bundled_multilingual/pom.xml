@@ -208,7 +208,11 @@
 							oracle.sqldeveloper,
 							oracle.sqldeveloper.report
 						</Require-Bundle>
+						<Import-Package>!*</Import-Package>
+						<Embed-Directory>lib</Embed-Directory>
+						<Embed-Transitive>true</Embed-Transitive>
 						<Embed-Dependency>*;scope=compile|runtime</Embed-Dependency>
+						<_removeheaders>Ignore-Package,Include-Resource,Private-Package,Embed-Dependency,*_ICON,*_LABEL,*_TITLE</_removeheaders>
 					</instructions>
 				</configuration>
 			</plugin>
