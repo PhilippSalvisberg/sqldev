@@ -1,0 +1,60 @@
+<extension id="com.trivadis.sqldev.example100" version="#EXTENSION_VERSION#" esdk-version="2.0"
+	xmlns="http://jcp.org/jsr/198/extension-manifest" rsbundle-class="com.trivadis.sqldev.example100.ExampleResources">
+	<name rskey="EXTENSION_NAME" />
+	<owner rskey="EXTENSION_OWNER" />
+
+	<!-- features may be used to enable/disable extensions without uninstalling them -->
+	<feature id="com.trivadis.sqldev.example100" xmlns="http://xmlns.oracle.com/ide/extension">
+		<category-id>db-category</category-id>
+		<name>#EXTENSION_NAME#</name>
+		<description><![CDATA[#EXTENSION_DESCRIPTION#]]></description>
+		<type>
+			<service can-user-disable="true" reload-if-used="true" />
+		</type>
+	</feature>
+
+	<!-- register dockable factories, actions, controllers and menu items -->
+	<trigger-hooks xmlns="http://xmlns.oracle.com/ide/extension">
+		<triggers xmlns:c="http://xmlns.oracle.com/ide/customization">
+			<dockable-factory-hook xmlns="http://xmlns.oracle.com/ide/extension">
+				<factory id="EXAMPLE_FACTORY" class="com.trivadis.sqldev.example100.ExampleDockableFactory" />
+			</dockable-factory-hook>
+			<actions xmlns="http://xmlns.oracle.com/jdeveloper/1013/extension">
+				<action id="EXAMPLE_VIEW_MENU_1_ACTION_ID">
+					<properties>
+						<property name="Name">${EXAMPLE_VIEW_MENU_1_LABEL}</property>
+						<property name="SmallIcon">res:${ONE_ICON}</property>
+						<property name="Category">View</property>
+					</properties>
+				</action>
+			</actions>
+			<controllers xmlns="http://xmlns.oracle.com/ide/extension">
+				<controller class="com.trivadis.sqldev.example100.ExampleController">
+					<update-rules>
+						<update-rule rule="always-enabled">
+							<action id="EXAMPLE_VIEW_MENU_1_ACTION_ID" />
+						</update-rule>
+					</update-rules>
+				</controller>
+			</controllers>
+			<menu-hook xmlns="http://jcp.org/jsr/198/extension-manifest">
+				<menus>
+					<menubar id="javax.ide.view.MAIN_WINDOW_MENUBAR_ID">
+						<menu id="javax.ide.VIEW_MENU_ID">
+							<section id="EXAMPLE_VIEW_MENU_SECTION_ID" weight="0.3f">
+								<item action-ref="EXAMPLE_VIEW_MENU_1_ACTION_ID" weight="10.0f" />
+							</section>
+						</menu>
+					</menubar>
+				</menus>
+			</menu-hook>
+		</triggers>
+	</trigger-hooks>
+
+	<!-- register dockable views (windows) -->
+	<hooks>
+		<dockable-hook xmlns="http://xmlns.oracle.com/ide/extension">
+			<dockable id="EXAMPLE_VIEW" />
+		</dockable-hook>
+	</hooks>
+</extension>
