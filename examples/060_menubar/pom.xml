@@ -301,7 +301,7 @@
 
 	<!-- More Project Information -->
 	<name>com.trivadis.sqldev.example60</name>
-	<description>Example SQL Developer extension to bundle multiple XML extensions.</description>
+	<description>Example SQL Developer extension to extend the menu bar.</description>
 	<url>https://github.com/PhilippSalvisberg/sqldev/examples/060_bundled</url>
 	<inceptionYear>2019</inceptionYear>
 	<licenses>

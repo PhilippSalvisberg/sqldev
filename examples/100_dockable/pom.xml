@@ -304,7 +304,7 @@
 
 	<!-- More Project Information -->
 	<name>com.trivadis.sqldev.example100</name>
-	<description>Example SQL Developer extension to bundle multiple XML extensions.</description>
+	<description>Example SQL Developer extension to add a dockable window via the menu bar.</description>
 	<url>https://github.com/PhilippSalvisberg/sqldev/examples/0100_bundled</url>
 	<inceptionYear>2019</inceptionYear>
 	<licenses>
