@@ -155,7 +155,7 @@ Open a connection, click on Tables, right-click on a table an select `Create Tab
 
 ![Run dialog](./images/run_dialog.png)
 
-Enter a `New table name`, select `75` percent and press the `Apply button`.
+Enter a `New table name`, select `75` percent and press the `Apply` button.
 
 ![Confirmation dialog](./images/confirmation_dialog.png)
 
