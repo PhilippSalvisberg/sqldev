@@ -212,8 +212,8 @@
 							META-INF/extension.xml=target/classes/META-INF/extension.xml
 						</Include-Resource>
 						<Require-Bundle>
-							oracle.sqldeveloper,
-							oracle.sqldeveloper.report
+							oracle.ide,
+							oracle.sqldeveloper
 						</Require-Bundle>
 						<Import-Package>!*</Import-Package>
 						<Embed-Directory>lib</Embed-Directory>
