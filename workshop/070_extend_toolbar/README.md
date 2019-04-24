@@ -83,7 +83,7 @@ Inspect the `action` and `context` variables.
 
 ![Inspect Variables](./images/inspect_variables.png)
 
-Change String text from `Action Name:` to `Performing Action Named:`.
+Change String text on line 21 from `Action Name:` to `Performing Action Named:`.
 
 Press Ctrl-S to save the changes and deploy the changes immediatly to SQL Developer.
 
