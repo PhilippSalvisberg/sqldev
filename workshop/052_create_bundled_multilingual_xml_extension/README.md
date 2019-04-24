@@ -60,7 +60,7 @@ Select `Extras`->`Features` from the main menu.
 
 Open the `Datenbank` node, deselect `Example 50 for SQL Developer` and press `Änderungen übernehmen`.
 
-![User Defined Extensions](./images/features_und_updates_verwalten.png)
+![Features und Updates verwalten](./images/features_und_updates_verwalten.png)
 
 Press `Ja`to restart SQL Developer.
 
