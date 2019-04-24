@@ -4,8 +4,6 @@
 
 Start Eclipse and select the `sqldev` workspace created in [Create Bundled XML Extension](https://github.com/PhilippSalvisberg/sqldev/tree/master/workshop/050_create_bundled_xml_extension).
 
-![Workspace](./images/eclipse_workspace.png)
-
 ## 2. Open example `052_bundled_multilingual`
 
 Select `File`->`Import...` from the main menu.
