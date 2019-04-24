@@ -119,13 +119,13 @@ Please note, that the `All Objects` report is placed in the root folder. Add `fo
 
 Click on `All Objects` to run the report.
 
-## 8.2 Editor `Properties`
+### 8.2 Editor `Properties`
 
 Open a connection, click on the `Tables` node, click on a table and then on the `Properties` tab.
 
 ![Table Properties](./images/table_properties.png)
 
-## 8.3 Navigator and Editors for `Drinks`
+### 8.3 Navigator and Editors for `Drinks`
 
 Open a connection, click on the `Drinks` node, expand all nodes and click on the `Soft drinks` node.
 
@@ -149,7 +149,7 @@ Click on the `Ingredients` tab.
 
 ![Cola Ingredients](./images/cola_ingredients.png)
 
-## 8.4 Context Menu `Create Table As Select`
+### 8.4 Context Menu `Create Table As Select`
 
 Open a connection, click on Tables, right-click on a table an select `Create Table as Select...`.
 
@@ -159,7 +159,7 @@ Enter a `New table name`, select `75` percent and press the `Apply` button.
 
 ![Confirmation dialog](./images/confirmation_dialog.png)
 
-# 9. Important Artefacts
+## 9. Important Artefacts
 
 Have a look at the following files to understand how the extension is build:
 
