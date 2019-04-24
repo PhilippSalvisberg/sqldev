@@ -34,11 +34,11 @@ The console output should look similar to the following:
 [INFO] ------------------------------------------------------------------------
 ```
 
-## 5. Start SQL Developer
+## 4. Start SQL Developer
 
 Start SQL Developer.
 
-## 6. Disable Extension
+## 5. Disable Extension
 
 Select `Tools`->`Features` from the main menu.
 
@@ -50,7 +50,7 @@ Press `Yes` to restart SQL Developer.
 
 ![Confirm Restart](./images/confirm_restart.png)
 
-## 7. Install Extension
+## 6. Install Extension
 
 Select `Help`->`Check for Updates...` from the main menu.
 
@@ -60,9 +60,9 @@ Press `Finish`.
 
 And Press `Yes` to restart SQL Developer.
 
-## 8. Run
+## 7. Run
 
-### 8.1 File Menu
+### 7.1 File Menu
 
 ![File Menu](./images/file_menu.png)
 
@@ -70,7 +70,7 @@ The `File menu item` is added in [`extensions.xml`](https://github.com/PhilippSa
 
 The label is configured in [`ExampleResources.properties`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/060_menubar/src/main/resources/com/trivadis/sqldev/example60/ExampleResources.properties#L15).
 
-### 8.2 Custom Menu
+### 7.2 Custom Menu
 
 ![Custom Menu](./images/custom_menu.png)
 
@@ -87,55 +87,55 @@ Press `Ctrl+Shift+A` to show the following dialog (value for CmdID may differ):
 
 ![Action event handled](./images/action_event_handled.png)
 
-### 8.3 Edit Menu
+### 7.3 Edit Menu
 
 ![Edit Menu](./images/edit_menu.png)
 
 The `Edit menu item 1` is added in [`extensions.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/060_menubar/extension.xml#L144-L148).
 
-### 8.4 View Menu
+### 7.4 View Menu
 
 ![View Menu](./images/view_menu.png)
 
 The `View menu item 1`, `View menu item 2` and `View menu item 3` are added in [`extensions.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/060_menubar/extension.xml#L149-L155).
 
-### 8.5 Navigate Menu
+### 7.5 Navigate Menu
 
 ![Navigate Menu](./images/navigate_menu.png)
 
 The `View menu item 1` is added in [`extensions.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/060_menubar/extension.xml#L156-L160).
 
-### 8.6 Run Menu
+### 7.6 Run Menu
 
 ![Run Menu](./images/run_menu.png)
 
 The `Run menu item 1` is added in [`extensions.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/060_menubar/extension.xml#L161-L165).
 
-### 8.7 Team Menu
+### 7.7 Team Menu
 
 ![Team Menu](./images/team_menu.png)
 
 The `Team menu item 1` is added in [`extensions.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/060_menubar/extension.xml#L166-L170).
 
-### 8.8 Tools Menu
+### 7.8 Tools Menu
 
 ![Tools Menu](./images/tools_menu.png)
 
 The `Tools menu item 1` is added in [`extensions.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/060_menubar/extension.xml#L171-L175).
 
-### 8.9 Window Menu
+### 7.9 Window Menu
 
 ![Window Menu](./images/window_menu.png)
 
 The `Window menu item 1` is added in [`extensions.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/060_menubar/extension.xml#L176-L180).
 
-### 8.10 Help Menu
+### 7.10 Help Menu
 
 ![Help Menu](./images/help_menu.png)
 
 The `Help menu item 1` is added in [`extensions.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/060_menubar/extension.xml#L181-L185).
 
-## 9. Important Artefacts/Sections
+## 8. Important Artefacts/Sections
 
 | Artefact | Section | Notes |
 | -------- | ------- | ----- |
