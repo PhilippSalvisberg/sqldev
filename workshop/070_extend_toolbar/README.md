@@ -73,7 +73,7 @@ Click on the first icon in the toolbar.
 
 ## 9. Debugging and Hot Deployment
 
-Follow the instructions in [Remote Debugging in Eclipse](https://github.com/PhilippSalvisberg/sqldev/blob/master/docs/remote-debugging.md) To debug an extension in SQL Developer.
+Follow the instructions in [Remote Debugging in Eclipse](https://github.com/PhilippSalvisberg/sqldev/blob/master/docs/remote-debugging.md) to set up remote debugging of an extension in SQL Developer.
 
 Set a breakpoint on line 21 in [`ExampleController.java`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/070_toolbar/src/main/java/com/trivadis/sqldev/example70/ExampleController.java#L21) in Eclipse and start the debugger.
 
