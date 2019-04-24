@@ -38,7 +38,7 @@ Switch to the Java perspective and press `Import projects...`.
 
 Select `Existing Maven Projects` and press `Next`.
 
-![Exsiting Maven Project...](./images/existing_maven_projects.png)
+![Existing Maven Projects...](./images/existing_maven_projects.png)
 
 Select the root directory `C:\git\sqldev\examples\050_bundled` and press `Finish`.
 
@@ -111,11 +111,11 @@ And Press `Yes` to restart SQL Developer.
 
 ### 8.1 Report `All Objects`
 
-You find the `All Objects` report in the Report window node.
+You find the `All Objects` report in the `Report` window.
 
 ![Reports](./images/reports.png)
 
-Please note, that the `All Objects` report is placed in the root folder. Add `folder` node(s) in all_objects.xml to place reports in any folder you like.
+Please note, that the `All Objects` report is placed in the root folder. Add `folder` node(s) in `all_objects.xml` to place reports in any folder you like.
 
 Click on `All Objects` to run the report.
 
