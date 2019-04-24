@@ -149,7 +149,7 @@ Click on the `Ingredients` tab.
 
 ![Cola Ingredients](./images/cola_ingredients.png)
 
-## 8.4 Context Menu `Create Table As Select``
+## 8.4 Context Menu `Create Table As Select`
 
 Open a connection, click on Tables, right-click on a table an select `Create Table as Select...`.
 
