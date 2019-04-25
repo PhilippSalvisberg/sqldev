@@ -4,6 +4,10 @@ Example-based tutorials to extend SQL Developer functionality.
 
 # Tutorials
 
+## [Set up the Environment](https://github.com/PhilippSalvisberg/sqldev/blob/master/workshop/000_set_up_environment/README.md)
+
+How to set up SQL Developer and Eclipse for these tutorials.
+
 ## Pure XML Extensions
 
 SQL Developer allows users to write custom reports, editors, navigators and actions as XML files and include them in the preferences dialog under `User Defined Extension`.
