@@ -56,17 +56,13 @@ These tutorials bundle the previously created XML extensions into a single ESDK2
 
 Create an extension (ZIP file) including all previously created XML extensions.
 
-<img alt="Report" src="./workshop/050_create_bundled_xml_extension/images/reports.png" height="150" />
-<img alt="Navigator" src="./workshop/050_create_bundled_xml_extension/images/cola_ingredients.png" height="150" />
-<img alt="Action" src="./workshop/050_create_bundled_xml_extension/images/run_dialog.png" height="150" />
+<img alt="Report" src="./workshop/050_create_bundled_xml_extension/images/reports.png" height="150" /> <img alt="Navigator" src="./workshop/050_create_bundled_xml_extension/images/cola_ingredients.png" height="150" /> <img alt="Action" src="./workshop/050_create_bundled_xml_extension/images/run_dialog.png" height="150" />
 
 ### [052 - Create Bundled Multilingual XML Extension](https://github.com/PhilippSalvisberg/sqldev/blob/master/workshop/050_create_bundled_xml_extension/README.md)
 
 Support an additional language (German) beside English in the previously created extension.
 
-<img alt="Report" src="./workshop/052_create_bundled_multilingual_xml_extension/images/berichte.png" height="150" />
-<img alt="Navigator" src="./workshop/052_create_bundled_multilingual_xml_extension/images/cola_ingredients.png" height="150" />
-<img alt="Action" src="./workshop/052_create_bundled_multilingual_xml_extension/images/run_dialog.png" height="150" />
+<img alt="Report" src="./workshop/052_create_bundled_multilingual_xml_extension/images/berichte.png" height="150" /> <img alt="Navigator" src="./workshop/052_create_bundled_multilingual_xml_extension/images/cola_ingredients.png" height="150" /> <img alt="Action" src="./workshop/052_create_bundled_multilingual_xml_extension/images/run_dialog.png" height="150" />
 
 ## Full-blown Extensions (XML & Java)
 
