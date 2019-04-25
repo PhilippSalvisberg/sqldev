@@ -50,7 +50,7 @@ Beside accessing the database you may access also Java classes thanks to the [Na
 
 SQL Developer extensions are ZIP files in a specific format. The format is defined in the [JDeveloper's Extension Software Development Kit (ESDK) version 2.0](https://docs.oracle.com/middleware/1212/jdev/OJDEG/toc.htm).
 
-These tutorials bundle the previously created XML extensions into a single ESDK2 extension (ZIP file). The `Java` code is reduced to a single file to handle custom resources, e.g. icons. The final ZIP file is build by Maven.
+These tutorials bundle the previously created XML extensions into a single extension (ZIP file). The `Java` code is reduced to a single file to handle custom resources, e.g. icons. The final ZIP file is build by Maven.
 
 ### [050 - Create Bundled XML Extension](https://github.com/PhilippSalvisberg/sqldev/blob/master/workshop/050_create_bundled_xml_extension/README.md)
 
@@ -66,7 +66,7 @@ Support an additional language (German) beside English in the previously created
 
 ## Full-blown Extensions (XML & Java)
 
-XML Extensions have limitations. Even if JavaScript Actions are used. To get the most out of ESDK2 extensions more XML configuration and Java code is required.
+XML Extensions have limitations. Even if JavaScript Actions are used. To get the most out of the ESDK, more XML configuration and Java code is required.
 
 ### [060 - Extend Menubar](https://github.com/PhilippSalvisberg/sqldev/blob/master/workshop/060_extend_menubar/README.md)
 
