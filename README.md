@@ -78,7 +78,7 @@ Extend every menu in the main menubar and create a custom menu.
 
 <img alt="Custom menu" src="./workshop/060_extend_menubar/images/custom_menu.png" height="150" />
 
-### [070 - Extend Toolbar](https://github.com/PhilippSalvisberg/sqldev/blob/master/workshop/060_extend_menubar/README.md)
+### [070 - Extend Toolbar](https://github.com/PhilippSalvisberg/sqldev/blob/master/workshop/070_extend_toolbar/README.md)
 
 Extend the main toolbar. Inspect variables with the debugger and hot deploy code changes.
 
