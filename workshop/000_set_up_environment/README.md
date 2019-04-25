@@ -41,7 +41,7 @@ Rename the file `C:\app\sqldeveloper19.1.0\sqldeveloper\bin\logging.conf` to `C:
 Create the the file `C:\app\sqldeveloper19.1.0\sqldeveloper\bin\logging.conf` with the following content:
 
 ```text
-#handler for console only (will be shown in "Messages" tab of "Log" view within SQL Developer)
+# handler for console only (will be shown in "Messages" tab of "Log" view within SQL Developer)
 handlers=java.util.logging.ConsoleHandler
 
 # Default global logging level. 
