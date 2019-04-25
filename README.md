@@ -4,7 +4,7 @@ Example-based tutorials to extend SQL Developer functionality.
 
 # Tutorials
 
-## [Set up the Environment](https://github.com/PhilippSalvisberg/sqldev/blob/master/workshop/000_set_up_environment/README.md)
+## [Set up the Environment](https://github.com/PhilippSalvisberg/sqldev/blob/master/workshop/000_set_up_environment/README.md#set-up-the-environment)
 
 How to set up SQL Developer and Eclipse for these tutorials.
 
@@ -12,37 +12,37 @@ How to set up SQL Developer and Eclipse for these tutorials.
 
 SQL Developer allows users to write custom reports, editors, navigators and actions as XML files and include them in the preferences dialog under `User Defined Extension`.
 
-### [010 - Create Report as XML Extension](https://github.com/PhilippSalvisberg/sqldev/blob/master/workshop/010_create_report_xml_extension/README.md)
+### [010 - Create Report as XML Extension](https://github.com/PhilippSalvisberg/sqldev/blob/master/workshop/010_create_report_xml_extension/README.md#create-report-as-xml-extension)
 
 Create a report within SQL Developer and share it as XML extension.
 
 <img alt="Report" src="./workshop/010_create_report_xml_extension/images/shared_reports.png" height="150" />
 
-### [020 - Create Editor XML Extension](https://github.com/PhilippSalvisberg/sqldev/blob/master/workshop/020_create_editor_xml_extension/README.md)
+### [020 - Create Editor XML Extension](https://github.com/PhilippSalvisberg/sqldev/tree/master/workshop/020_create_editor_xml_extension/README.md#create-editor-xml-extension)
 
 Show details for a selected node in the Connections window. This is called an editor. Technically it's just a report.
 
 <img alt="Editor" src="./workshop/020_create_editor_xml_extension/images/table_properties.png" height="150" />
 
-### [030 - Create Navigator XML Extension](https://github.com/PhilippSalvisberg/sqldev/blob/master/workshop/030_create_navigator_xml_extension/README.md)
+### [030 - Create Navigator XML Extension](https://github.com/PhilippSalvisberg/sqldev/tree/master/workshop/030_create_navigator_xml_extension/README.md#create-navigator-xml-extension)
 
 Create a new node with children and grandchildren int the Connections navigator tree.
 
 <img alt="Navigator" src="./workshop/030_create_navigator_xml_extension/images/drinks2.png" height="150" />
 
-### [032 - Add Editors to Navigator XML Extension](https://github.com/PhilippSalvisberg/sqldev/blob/master/workshop/032_add_editors_for_navigator/README.md)
+### [032 - Add Editors to Navigator XML Extension](https://github.com/PhilippSalvisberg/sqldev/tree/master/workshop/032_add_editors_for_navigator/README.md#add-editors-to-navigator-xml-extension)
 
 Add two editors for some nodes of the previously created navigator.
 
 <img alt="Editor" src="./workshop/032_add_editors_for_navigator/images/cola_ingredients.png" height="150" />
 
-### [040 - Create PL/SQL Action XML Extension](https://github.com/PhilippSalvisberg/sqldev/blob/master/workshop/040_create_plsql_action_xml_extension/README.md)
+### [040 - Create PL/SQL Action XML Extension](https://github.com/PhilippSalvisberg/sqldev/tree/master/workshop/040_create_plsql_action_xml_extension/README.md#create-plsql-action-xml-extension)
 
 Create a context menu item and a dialog to enter some parameters for an action to be performed. The action is implemented as an anonymous PL/SQL block.
 
 <img alt="Action" src="./workshop/040_create_plsql_action_xml_extension/images/run_dialog.png" height="150" />
 
-### [042 - Create JavaScript Action XML Extension](https://github.com/PhilippSalvisberg/sqldev/tree/master/workshop/042_create_javascript_action_xml_extension)
+### [042 - Create JavaScript Action XML Extension](https://github.com/PhilippSalvisberg/sqldev/tree/master/workshop/042_create_javascript_action_xml_extension/README.md#create-javascript-action-xml-extension)
 
 Create the same context menu item and dialog as in the previous example. In this case the action is implemented in JavaScript instead of PL/SQL.
 
@@ -56,13 +56,13 @@ SQL Developer extensions are ZIP files in a specific format. The format is defin
 
 These tutorials bundle the previously created XML extensions into a single extension (ZIP file). The `Java` code is reduced to a single file to handle custom resources, e.g. icons. The final ZIP file is build by Maven.
 
-### [050 - Create Bundled XML Extension](https://github.com/PhilippSalvisberg/sqldev/blob/master/workshop/050_create_bundled_xml_extension/README.md)
+### [050 - Create Bundled XML Extension](https://github.com/PhilippSalvisberg/sqldev/tree/master/workshop/050_create_bundled_xml_extension/README.md#create-bundled-xml-extension)
 
 Create an extension (ZIP file) including all previously created XML extensions.
 
 <img alt="Report" src="./workshop/050_create_bundled_xml_extension/images/reports.png" height="150" /> <img alt="Navigator" src="./workshop/050_create_bundled_xml_extension/images/cola_ingredients.png" height="150" /> <img alt="Action" src="./workshop/050_create_bundled_xml_extension/images/run_dialog.png" height="150" />
 
-### [052 - Create Bundled Multilingual XML Extension](https://github.com/PhilippSalvisberg/sqldev/blob/master/workshop/050_create_bundled_xml_extension/README.md)
+### [052 - Create Bundled Multilingual XML Extension](https://github.com/PhilippSalvisberg/sqldev/blob/master/workshop/052_create_bundled_multilingual_xml_extension/README.md#create-bundled-multilingual-xml-extension)
 
 Support an additional language (German) beside English in the previously created extension.
 
@@ -72,31 +72,31 @@ Support an additional language (German) beside English in the previously created
 
 XML Extensions have limitations. Even if JavaScript Actions are used. To get the most out of the ESDK, more XML configuration and Java code is required.
 
-### [060 - Extend Menubar](https://github.com/PhilippSalvisberg/sqldev/blob/master/workshop/060_extend_menubar/README.md)
+### [060 - Extend Menubar](https://github.com/PhilippSalvisberg/sqldev/tree/master/workshop/060_extend_menubar/README.md#extend-menubar)
 
 Extend every menu in the main menubar and create a custom menu.
 
 <img alt="Custom menu" src="./workshop/060_extend_menubar/images/custom_menu.png" height="150" />
 
-### [070 - Extend Toolbar](https://github.com/PhilippSalvisberg/sqldev/blob/master/workshop/070_extend_toolbar/README.md)
+### [070 - Extend Toolbar](https://github.com/PhilippSalvisberg/sqldev/tree/master/workshop/070_extend_toolbar/README.md#extend-toolbar)
 
 Extend the main toolbar. Inspect variables with the debugger and hot deploy code changes.
 
 <img alt="Toolbar" src="./workshop/070_extend_toolbar/images/toolbar.png" />
 
-### [080 - Extend Context Menu](https://github.com/PhilippSalvisberg/sqldev/blob/master/workshop/080_extend_context_menu/README.md)
+### [080 - Extend Context Menu](https://github.com/PhilippSalvisberg/sqldev/tree/master/workshop/080_extend_context_menu/README.md#extend-context-menu)
 
 Extend the context menu in the navigator node and PL/SQL editor. Access connection properties such as username and password.
 
 <img alt="Action via Context Menu" src="./workshop/080_extend_context_menu/images/connection_action_event_handled.png" height="150"/>
 
-### [090 - Add Preferences](https://github.com/PhilippSalvisberg/sqldev/blob/master/workshop/090_add_preferences/README.md)
+### [090 - Add Preferences](https://github.com/PhilippSalvisberg/sqldev/tree/master/workshop/090_add_preferences/README.md#add-preferences)
 
 Add a preference dialog to the previously created extension. Add conditional processing based on the current preference settings, e.g. to show or to hide the password of a connection.
 
 <img alt="Preferences" src="./workshop/090_add_preferences/images/preferences.png" height="150"/>
 
-### [100 - Add Dockable Window](https://github.com/PhilippSalvisberg/sqldev/blob/master/workshop/100_add_dockable_window/README.md)
+### [100 - Add Dockable Window](https://github.com/PhilippSalvisberg/sqldev/blob/master/workshop/100_add_dockable_window/README.md#add-dockable-window)
 
 Show a new dockable window via main menu action.
 
