@@ -146,7 +146,7 @@ The action is translated in [`ctas_plsql_de.xliff`](https://github.com/PhilippSa
 
 ## 10. Close SQL Developer
 
-Select `File`->`Exit` from the main menu.
+Select `Datei`->`Beenden` from the main menu.
 
 ## 11. Change Language to English
 
