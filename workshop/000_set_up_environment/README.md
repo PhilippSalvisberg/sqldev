@@ -25,9 +25,9 @@ Rename `C:\app\sqldeveloper` to `C:\app\sqldeveloper19.1.0`.
 Open `%APPDATA%\sqldeveloper\19.1.0\product.conf` in an editor and add the following lines:
 
 ```text
-#AddVMOption -Duser.language=en	
-#AddVMOption -Duser.country=US
-#AddVMOption -Duser.region=US
+AddVMOption -Duser.language=en	
+AddVMOption -Duser.country=US
+AddVMOption -Duser.region=US
 ```
 
 This entries change the language of SQL Developer to English.
