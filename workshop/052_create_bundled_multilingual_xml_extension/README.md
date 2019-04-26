@@ -150,15 +150,19 @@ Select `Datei`->`Beenden` from the main menu.
 
 ## 11. Change Language to English
 
-Open `"%APPDATA%\sqldeveloper\19.1.0\product.conf"` in an editor and remove the following lines:
+Open `"%APPDATA%\sqldeveloper\19.1.0\product.conf"` in an editor and change this line from
 
 ```text
 AddVMOption -Duser.language=de	
-AddVMOption -Duser.country=US
-AddVMOption -Duser.region=US
 ```
 
-Save the file.
+to 
+
+```text
+AddVMOption -Duser.language=en
+```
+
+And Save the file.
 
 ## 12. Start SQL Developer
 
