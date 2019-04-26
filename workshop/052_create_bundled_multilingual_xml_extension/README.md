@@ -162,7 +162,7 @@ to
 AddVMOption -Duser.language=en
 ```
 
-And Save the file.
+and save the file.
 
 ## 12. Start SQL Developer
 
