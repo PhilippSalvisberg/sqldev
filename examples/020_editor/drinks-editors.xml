@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <displays>
 	<display type="editor" style="Table" enable="true" 
-		objectType="beer-folder,cider-folder,distilled-folder,hard-soda-folder,wine-folder,caffeinated-folder,chocolate-folder,soft-drinks-folder,soft-drinks">
+		objectType="beer-folder,cider-folder,distilled-folder,hard-soda-folder,wine-folder,caffeinated-folder,chocolate-folder,soft-drinks-folder,soft-drinks,soft-drinks_FOLDER">
 		<name><![CDATA[Nutrition 100ml]]></name>
 		<description><![CDATA[]]></description>
 		<tooltip><![CDATA[]]></tooltip>
@@ -41,6 +41,7 @@ select object_name as "Name",
   )
  where object_type = :OBJECT_TYPE and object_name = :OBJECT_NAME 
     or object_type || '-folder' = :OBJECT_TYPE
+	or object_type || '_FOLDER' = :OBJECT_TYPE
  order by object_name
  				]]>
 			</sql>
