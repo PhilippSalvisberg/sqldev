@@ -1,0 +1,27 @@
+<navigator RESOURCE_FILE="oracle.dbtools.raptor.navigator.OracleNavigatorResource">
+	<objectType connType="Oracle" id="soft-drinks" weight="203">
+		<folder singleClickOpen="true">
+			<icon RSKEY="OracleIcons.FAVORITES"></icon>
+			<label RSKEY="Soft Drinks"/>
+			<queries>
+				<query>
+					<sql  constrained="true">
+						<![CDATA[
+SELECT 'Cola' AS name, 'soft-drinks' AS type 
+  FROM dual
+UNION ALL
+SELECT 'Fanta' AS name, 'soft-drinks' AS type
+  FROM dual
+UNION ALL
+SELECT 'Sprite' AS name, 'soft-drinks' AS type 
+  FROM dual
+						]]>
+					</sql>
+				</query>
+			</queries>
+		</folder>
+		<node>
+			<icon RSKEY="OracleIcons.USER" />
+		</node>
+	</objectType>
+</navigator>
