@@ -1,6 +1,6 @@
 <navigator RESOURCE_FILE="oracle.dbtools.raptor.navigator.OracleNavigatorResource">
 	<objectType connType="Oracle" id="soft-drinks" weight="203">
-		<folder singleClickOpen="true">
+		<folder>
 			<icon RSKEY="OracleIcons.FAVORITES"></icon>
 			<label RSKEY="Soft Drinks"/>
 			<queries>
