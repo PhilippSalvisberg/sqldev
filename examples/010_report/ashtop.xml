@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<displays>
+<display id="cea51eee-016d-1000-8001-c0a8011a8817" type="" style="Script" enable="true">
+	<name><![CDATA[ashtop]]></name>
+	<description><![CDATA[]]></description>
+	<tooltip><![CDATA[]]></tooltip>
+	<drillclass><![CDATA[]]></drillclass>
+	<CustomValues>
+	</CustomValues>
+	<query>
+		<sql><![CDATA[set termout off
+set verify off
+set linesize 500
+
+column grouping_cols new_value grouping_cols noprint
+column filters new_value filters noprint
+column fromtime new_value fromtime noprint
+column totime new_value totime noprint
+column tptdir new_value tptdir noprint
+
+select :grouping_cols as grouping_cols,
+       :filters       as filters,
+       :fromtime      as fromtime,
+       :totime        as totime,
+       :tptdir        as tptdir
+  from dual;
+
+set termout on
+
+cd &tptdir
+@ashtop "&grouping_cols" "&filters" "&fromtime" "&totime"]]></sql>
+		<binds>
+			<bind id="grouping_cols">
+				<prompt><![CDATA[Grouping Columns]]></prompt>
+				<tooltip><![CDATA[(a.) gv$active_session_history, (u.) dba_users]]></tooltip>
+				<value><![CDATA[u.username, a.sql_id]]></value>
+				<bracket><![CDATA[null]]></bracket>
+			</bind>
+			<bind id="filters">
+				<prompt><![CDATA[Filter condition]]></prompt>
+				<tooltip><![CDATA[(a.) gv$active_session_history, (u.) dba_users]]></tooltip>
+				<value><![CDATA[a.session_type='FOREGROUND']]></value>
+				<bracket><![CDATA[null]]></bracket>
+			</bind>
+			<bind id="fromtime">
+				<prompt><![CDATA[From time]]></prompt>
+				<tooltip><![CDATA[datetime expression]]></tooltip>
+				<value><![CDATA[sysdate-1/24]]></value>
+				<bracket><![CDATA[null]]></bracket>
+			</bind>
+			<bind id="totime">
+				<prompt><![CDATA[To time]]></prompt>
+				<tooltip><![CDATA[totime]]></tooltip>
+				<value><![CDATA[sysdate]]></value>
+				<bracket><![CDATA[null]]></bracket>
+			</bind>
+			<bind id="tptdir">
+				<prompt><![CDATA[TPT directory]]></prompt>
+				<tooltip><![CDATA[download/clone Tanel Poder Tools from https://github.com/tanelpoder/tpt-oracle]]></tooltip>
+				<value><![CDATA[/users/phs/github/tpt-oracle]]></value>
+				<bracket><![CDATA[null]]></bracket>
+			</bind>
+		</binds>
+	</query>
+		<pdf version="VERSION_1_7" compression="CONTENT">
+			<docproperty title="null" author="null" subject="null" keywords="null" />
+			<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+			<column>
+				<heading font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+				<footing font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+				<blob blob="NONE" zip="false" />
+			</column>
+			<table font="null" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+			<header enable="false" generatedate="false">
+				<data>
+				null				</data>
+			</header>
+			<footer enable="false" generatedate="false">
+				<data value="null" />
+			</footer>
+			<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+		</pdf>
+</display>
+</displays>
