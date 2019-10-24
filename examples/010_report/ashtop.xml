@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <displays>
-<display id="cea51eee-016d-1000-8001-c0a8011a8817" type="" style="Script" enable="true">
+<display id="fec3884b-016d-1000-8003-7f0000010c0b" type="" style="Script" enable="true">
 	<name><![CDATA[ashtop]]></name>
 	<description><![CDATA[]]></description>
 	<tooltip><![CDATA[]]></tooltip>
@@ -50,13 +50,13 @@ cd &tptdir
 			</bind>
 			<bind id="totime">
 				<prompt><![CDATA[To time]]></prompt>
-				<tooltip><![CDATA[totime]]></tooltip>
+				<tooltip><![CDATA[datetime expression]]></tooltip>
 				<value><![CDATA[sysdate]]></value>
 				<bracket><![CDATA[null]]></bracket>
 			</bind>
 			<bind id="tptdir">
 				<prompt><![CDATA[TPT directory]]></prompt>
-				<tooltip><![CDATA[download/clone Tanel Poder Tools from https://github.com/tanelpoder/tpt-oracle]]></tooltip>
+				<tooltip><![CDATA[download/clone from https://github.com/tanelpoder/tpt-oracle]]></tooltip>
 				<value><![CDATA[/users/phs/github/tpt-oracle]]></value>
 				<bracket><![CDATA[null]]></bracket>
 			</bind>
@@ -73,7 +73,9 @@ cd &tptdir
 			<table font="null" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
 			<header enable="false" generatedate="false">
 				<data>
-				null				</data>
+				
+				
+				null												</data>
 			</header>
 			<footer enable="false" generatedate="false">
 				<data value="null" />
