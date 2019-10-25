@@ -11,12 +11,13 @@
 		<sql><![CDATA[set termout off
 set verify off
 set linesize 500
+set pagesize 50
 
 column grouping_cols new_value grouping_cols noprint
-column filters new_value filters noprint
-column fromtime new_value fromtime noprint
-column totime new_value totime noprint
-column tptdir new_value tptdir noprint
+column filters       new_value filters       noprint
+column fromtime      new_value fromtime      noprint
+column totime        new_value totime        noprint
+column tptdir        new_value tptdir        noprint
 
 select :grouping_cols as grouping_cols,
        :filters       as filters,
@@ -75,7 +76,8 @@ cd &tptdir
 				<data>
 				
 				
-				null												</data>
+				
+				null																</data>
 			</header>
 			<footer enable="false" generatedate="false">
 				<data value="null" />
