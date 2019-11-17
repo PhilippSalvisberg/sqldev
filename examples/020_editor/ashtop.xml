@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<displays>
+	<display type="editor" style="Script" enable="true" objectType="TABLE_FOLDER">
+		<name><![CDATA[ashtop]]></name>
+		<description><![CDATA[]]></description>
+		<tooltip><![CDATA[]]></tooltip>
+		<drillclass><![CDATA[]]></drillclass>
+		<CustomValues>
+		</CustomValues>
+		<query>
+			<sql><![CDATA[set termout off
+set verify off
+set linesize 500
+set pagesize 50
+cd /users/phs/github/tpt-oracle
+set termout on
+@ashtop "u.username, a.sql_id" "a.session_type='FOREGROUND'" "sysdate-1/24" "sysdate"]]></sql>
+		</query>
+	</display>
+</displays>
