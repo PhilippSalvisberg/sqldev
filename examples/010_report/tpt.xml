@@ -50,6 +50,101 @@ cd &tptdir
 				</binds>
 			</query>
 		</display>
+		<display id="7523e775-016e-1000-8002-7f0000019760" type="" style="Script" enable="true">
+			<name><![CDATA[xiad]]></name>
+			<description><![CDATA[]]></description>
+			<tooltip><![CDATA[]]></tooltip>
+			<drillclass><![CDATA[]]></drillclass>
+			<CustomValues>
+			</CustomValues>
+			<query>
+				<sql><![CDATA[set termout off
+set verify off
+set linesize 500
+set pagesize 500
+
+column sqlid  new_value sqlid  noprint
+column child  new_value child  noprint
+column tptdir new_value tptdir noprint
+
+select :sqlid  as sqlid,
+       :child  as child,
+       :tptdir as tptdir
+  from dual;
+
+set termout on
+
+cd &tptdir
+@xiad "&sqlid" "&child"]]></sql>
+				<binds>
+					<bind id="sqlid">
+						<prompt><![CDATA[SQL ID]]></prompt>
+						<value><![CDATA[6s42sx1zk30x4]]></value>
+						<bracket><![CDATA[null]]></bracket>
+					</bind>
+					<bind id="child">
+						<prompt><![CDATA[Child cursor]]></prompt>
+						<value><![CDATA[%]]></value>
+						<bracket><![CDATA[null]]></bracket>
+					</bind>
+					<bind id="tptdir">
+						<prompt><![CDATA[TPT directory]]></prompt>
+						<tooltip><![CDATA[download/clone from https://github.com/tanelpoder/tpt-oracle]]></tooltip>
+						<value><![CDATA[/users/phs/github/tpt-oracle]]></value>
+						<bracket><![CDATA[null]]></bracket>
+					</bind>
+				</binds>
+			</query>
+		</display>
+
+		<display id="7523e775-016e-1000-8002-7f0000019760" type="" style="Script" enable="true">
+			<name><![CDATA[xbi]]></name>
+			<description><![CDATA[]]></description>
+			<tooltip><![CDATA[]]></tooltip>
+			<drillclass><![CDATA[]]></drillclass>
+			<CustomValues>
+			</CustomValues>
+			<query>
+				<sql><![CDATA[set termout off
+set verify off
+set linesize 500
+set pagesize 500
+
+column sqlid  new_value sqlid  noprint
+column child  new_value child  noprint
+column tptdir new_value tptdir noprint
+
+select :sqlid  as sqlid,
+       :child  as child,
+       :tptdir as tptdir
+  from dual;
+
+set termout on
+
+cd &tptdir
+@xbi "&sqlid" "&child"]]></sql>
+				<binds>
+					<bind id="sqlid">
+						<prompt><![CDATA[SQL ID]]></prompt>
+						<value><![CDATA[6s42sx1zk30x4]]></value>
+						<bracket><![CDATA[null]]></bracket>
+					</bind>
+					<bind id="child">
+						<prompt><![CDATA[Child cursor]]></prompt>
+						<value><![CDATA[0]]></value>
+						<bracket><![CDATA[null]]></bracket>
+					</bind>
+					<bind id="tptdir">
+						<prompt><![CDATA[TPT directory]]></prompt>
+						<tooltip><![CDATA[download/clone from https://github.com/tanelpoder/tpt-oracle]]></tooltip>
+						<value><![CDATA[/users/phs/github/tpt-oracle]]></value>
+						<bracket><![CDATA[null]]></bracket>
+					</bind>
+				</binds>
+			</query>
+		</display>
+
+
 		<display id="75c11c4a-016e-1000-8003-7f00000123c3" type="" style="Script" enable="true">
 			<name><![CDATA[nonshared]]></name>
 			<description><![CDATA[]]></description>
