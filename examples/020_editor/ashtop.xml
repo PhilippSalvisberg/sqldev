@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <displays>
-	<display type="editor" style="Script" enable="true" objectType="TABLE_FOLDER">
+	<display type="editor" style="Script" enable="true" objectType="TABLE_FOLDER,TABLE,PACKAGE">
 		<name><![CDATA[ashtop]]></name>
 		<description><![CDATA[]]></description>
 		<tooltip><![CDATA[]]></tooltip>
