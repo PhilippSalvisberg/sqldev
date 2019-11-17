@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<displays>
+	<folder>
+		<name><![CDATA[tpt]]></name>
+		<tooltip><![CDATA[]]></tooltip>
+		<description><![CDATA[Tanel Poder's Troubleshooting & Performance Tools for Oracle databases]]></description>
+		<display id="7523e775-016e-1000-8002-7f0000019760" type="" style="Script" enable="true">
+			<name><![CDATA[sqlidx]]></name>
+			<description><![CDATA[]]></description>
+			<tooltip><![CDATA[]]></tooltip>
+			<drillclass><![CDATA[]]></drillclass>
+			<CustomValues>
+			</CustomValues>
+			<query>
+				<sql><![CDATA[set termout off
+set verify off
+set linesize 500
+set pagesize 500
+
+column sqlid  new_value sqlid  noprint
+column child  new_value child  noprint
+column tptdir new_value tptdir noprint
+
+select :sqlid  as sqlid,
+       :child  as child,
+       :tptdir as tptdir
+  from dual;
+
+set termout on
+
+cd &tptdir
+@sqlidx "&sqlid" "&child"]]></sql>
+				<binds>
+					<bind id="sqlid">
+						<prompt><![CDATA[SQL ID]]></prompt>
+						<value><![CDATA[6s42sx1zk30x4]]></value>
+						<bracket><![CDATA[null]]></bracket>
+					</bind>
+					<bind id="child">
+						<prompt><![CDATA[Child cursor]]></prompt>
+						<value><![CDATA[%]]></value>
+						<bracket><![CDATA[null]]></bracket>
+					</bind>
+					<bind id="tptdir">
+						<prompt><![CDATA[TPT directory]]></prompt>
+						<tooltip><![CDATA[download/clone from https://github.com/tanelpoder/tpt-oracle]]></tooltip>
+						<value><![CDATA[/users/phs/github/tpt-oracle]]></value>
+						<bracket><![CDATA[null]]></bracket>
+					</bind>
+				</binds>
+			</query>
+		</display>
+		<display id="75c11c4a-016e-1000-8003-7f00000123c3" type="" style="Script" enable="true">
+			<name><![CDATA[nonshared]]></name>
+			<description><![CDATA[]]></description>
+			<tooltip><![CDATA[]]></tooltip>
+			<drillclass><![CDATA[]]></drillclass>
+			<CustomValues>
+			</CustomValues>
+			<query>
+				<sql><![CDATA[set termout off
+set verify off
+set linesize 500
+set pagesize 500
+
+column sqlid  new_value sqlid  noprint
+column tptdir new_value tptdir noprint
+
+select :sqlid  as sqlid,
+       :tptdir as tptdir
+  from dual;
+
+set termout on
+
+cd &tptdir
+@nonshared "&sqlid"]]></sql>
+				<binds>
+					<bind id="sqlid">
+						<prompt><![CDATA[SQL ID]]></prompt>
+						<value><![CDATA[dbfsrk20kwmbk]]></value>
+						<bracket><![CDATA[null]]></bracket>
+					</bind>
+					<bind id="tptdir">
+						<prompt><![CDATA[TPT directory]]></prompt>
+						<tooltip><![CDATA[download/clone from https://github.com/tanelpoder/tpt-oracle]]></tooltip>
+						<value><![CDATA[/users/phs/github/tpt-oracle]]></value>
+						<bracket><![CDATA[null]]></bracket>
+					</bind>
+				</binds>
+			</query>
+		</display>
+		<display id="fec3884b-016d-1000-8003-7f0000010c0b" type="" style="Script" enable="true">
+			<name><![CDATA[ashtop]]></name>
+			<description><![CDATA[]]></description>
+			<tooltip><![CDATA[]]></tooltip>
+			<drillclass><![CDATA[]]></drillclass>
+			<CustomValues>
+			</CustomValues>
+			<query>
+				<sql><![CDATA[set termout off
+set verify off
+set linesize 500
+set pagesize 50
+
+column grouping_cols new_value grouping_cols noprint
+column filters       new_value filters       noprint
+column fromtime      new_value fromtime      noprint
+column totime        new_value totime        noprint
+column tptdir        new_value tptdir        noprint
+
+select :grouping_cols as grouping_cols,
+       :filters       as filters,
+       :fromtime      as fromtime,
+       :totime        as totime,
+       :tptdir        as tptdir
+  from dual;
+
+set termout on
+
+cd &tptdir
+@ashtop "&grouping_cols" "&filters" "&fromtime" "&totime"]]></sql>
+				<binds>
+					<bind id="grouping_cols">
+						<prompt><![CDATA[Grouping Columns]]></prompt>
+						<tooltip><![CDATA[(a.) gv$active_session_history, (u.) dba_users]]></tooltip>
+						<value><![CDATA[u.username, a.sql_id]]></value>
+						<bracket><![CDATA[null]]></bracket>
+					</bind>
+					<bind id="filters">
+						<prompt><![CDATA[Filter condition]]></prompt>
+						<tooltip><![CDATA[(a.) gv$active_session_history, (u.) dba_users]]></tooltip>
+						<value><![CDATA[a.session_type='FOREGROUND']]></value>
+						<bracket><![CDATA[null]]></bracket>
+					</bind>
+					<bind id="fromtime">
+						<prompt><![CDATA[From time]]></prompt>
+						<tooltip><![CDATA[datetime expression]]></tooltip>
+						<value><![CDATA[sysdate-1/24]]></value>
+						<bracket><![CDATA[null]]></bracket>
+					</bind>
+					<bind id="totime">
+						<prompt><![CDATA[To time]]></prompt>
+						<tooltip><![CDATA[datetime expression]]></tooltip>
+						<value><![CDATA[sysdate]]></value>
+						<bracket><![CDATA[null]]></bracket>
+					</bind>
+					<bind id="tptdir">
+						<prompt><![CDATA[TPT directory]]></prompt>
+						<tooltip><![CDATA[download/clone from https://github.com/tanelpoder/tpt-oracle]]></tooltip>
+						<value><![CDATA[/users/phs/github/tpt-oracle]]></value>
+						<bracket><![CDATA[null]]></bracket>
+					</bind>
+				</binds>
+			</query>
+		</display>
+		<display id="fec3884b-016d-1000-8003-7f0000010c0b" type="" style="Script" enable="true">
+			<name><![CDATA[dashtop]]></name>
+			<description><![CDATA[]]></description>
+			<tooltip><![CDATA[]]></tooltip>
+			<drillclass><![CDATA[]]></drillclass>
+			<CustomValues>
+			</CustomValues>
+			<query>
+				<sql><![CDATA[set termout off
+set verify off
+set linesize 500
+set pagesize 50
+
+column grouping_cols new_value grouping_cols noprint
+column filters       new_value filters       noprint
+column fromtime      new_value fromtime      noprint
+column totime        new_value totime        noprint
+column tptdir        new_value tptdir        noprint
+
+select :grouping_cols as grouping_cols,
+       :filters       as filters,
+       :fromtime      as fromtime,
+       :totime        as totime,
+       :tptdir        as tptdir
+  from dual;
+
+set termout on
+
+cd &tptdir
+@ash/dashtop "&grouping_cols" "&filters" "&fromtime" "&totime"]]></sql>
+				<binds>
+					<bind id="grouping_cols">
+						<prompt><![CDATA[Grouping Columns]]></prompt>
+						<tooltip><![CDATA[(a.) gv$active_session_history, (u.) dba_users]]></tooltip>
+						<value><![CDATA[u.username, a.sql_id]]></value>
+						<bracket><![CDATA[null]]></bracket>
+					</bind>
+					<bind id="filters">
+						<prompt><![CDATA[Filter condition]]></prompt>
+						<tooltip><![CDATA[(a.) gv$active_session_history, (u.) dba_users]]></tooltip>
+						<value><![CDATA[a.session_type='FOREGROUND']]></value>
+						<bracket><![CDATA[null]]></bracket>
+					</bind>
+					<bind id="fromtime">
+						<prompt><![CDATA[From time]]></prompt>
+						<tooltip><![CDATA[datetime expression]]></tooltip>
+						<value><![CDATA[sysdate-1/24-2]]></value>
+						<bracket><![CDATA[null]]></bracket>
+					</bind>
+					<bind id="totime">
+						<prompt><![CDATA[To time]]></prompt>
+						<tooltip><![CDATA[datetime expression]]></tooltip>
+						<value><![CDATA[sysdate]]></value>
+						<bracket><![CDATA[null]]></bracket>
+					</bind>
+					<bind id="tptdir">
+						<prompt><![CDATA[TPT directory]]></prompt>
+						<tooltip><![CDATA[download/clone from https://github.com/tanelpoder/tpt-oracle]]></tooltip>
+						<value><![CDATA[/users/phs/github/tpt-oracle]]></value>
+						<bracket><![CDATA[null]]></bracket>
+					</bind>
+				</binds>
+			</query>
+		</display>
+	</folder>
+</displays>
