@@ -1,0 +1,74 @@
+<extension id="com.trivadis.sqldev.example110"
+	version="#EXTENSION_VERSION#" esdk-version="2.0"
+	xmlns="http://jcp.org/jsr/198/extension-manifest"
+	rsbundle-class="com.trivadis.sqldev.example110.ExampleResources">
+	<name rskey="EXTENSION_NAME" />
+	<owner rskey="EXTENSION_OWNER" />
+
+	<!-- features may be used to enable/disable extensions without uninstalling 
+		them -->
+	<feature id="com.trivadis.sqldev.example110"
+		xmlns="http://xmlns.oracle.com/ide/extension">
+		<category-id>db-category</category-id>
+		<name>#EXTENSION_NAME#</name>
+		<description><![CDATA[#EXTENSION_DESCRIPTION#]]></description>
+		<type>
+			<service can-user-disable="true" reload-if-used="true" />
+		</type>
+	</feature>
+
+	<!-- register dockable factories, actions, controllers and menu items -->
+	<trigger-hooks
+		xmlns="http://xmlns.oracle.com/ide/extension">
+		<triggers xmlns:c="http://xmlns.oracle.com/ide/customization">
+			<actions xmlns="http://xmlns.oracle.com/jdeveloper/1013/extension">
+				<action id="EXAMPLE_CONTEXT_MENU_1_ACTION_ID">
+					<properties>
+						<property name="Name">${EXAMPLE_CONTEXT_MENU_1_LABEL}</property>
+						<property name="SmallIcon">res:${ONE_ICON}</property>
+					</properties>
+				</action>
+				<action id="EXAMPLE_CONTEXT_MENU_2_ACTION_ID">
+					<properties>
+						<property name="Name">${EXAMPLE_CONTEXT_MENU_2_LABEL}</property>
+						<property name="SmallIcon">res:${TWO_ICON}</property>
+					</properties>
+				</action>
+			</actions>
+			<controllers xmlns="http://xmlns.oracle.com/ide/extension">
+				<controller class="com.trivadis.sqldev.example110.ExampleController">
+					<!-- TODO: remove if not necessary -->
+					<update-rules>
+						<update-rule rule="always-enabled">
+							<action id="EXAMPLE_CONTEXT_MENU_1_ACTION_ID" />
+							<action id="EXAMPLE_CONTEXT_MENU_2_ACTION_ID" />
+						</update-rule>
+					</update-rules>
+				</controller>
+			</controllers>
+			<!-- TODO: find something else to trigger load of extension instead of right-click on an editor -->
+			<context-menu-hook rule="always-enabled">
+				<site idref="editor" />
+				<menu>
+					<section xmlns="http://jcp.org/jsr/198/extension-manifest"
+						id="EXAMPLE_CONTEXT_MENU_SECTION_ID" weight="0.1">
+						<item action-ref="EXAMPLE_CONTEXT_MENU_2_ACTION_ID" />
+					</section>
+				</menu>
+			</context-menu-hook>
+		</triggers>
+	</trigger-hooks>
+
+	<!-- register context menu listener -->
+	<hooks>
+		<jdeveloper-hook>
+			<context-menu-listeners>
+				<!-- TODO: fix, this does not work for DisplayEditableResultTable or DisplayResultTable or ... -->
+				<site idref="editor"> 
+					<listener-class>com.trivadis.sqldev.example110.ExampleMenuListener</listener-class>
+				</site>
+			</context-menu-listeners>
+		</jdeveloper-hook>
+	</hooks>
+
+</extension>
