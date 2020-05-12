@@ -34,14 +34,20 @@
 						<property name="SmallIcon">res:${TWO_ICON}</property>
 					</properties>
 				</action>
+				<action id="EXAMPLE_CONTEXT_MENU_3_ACTION_ID">
+					<properties>
+						<property name="Name">${EXAMPLE_CONTEXT_MENU_3_LABEL}</property>
+						<property name="SmallIcon">res:${THREE_ICON}</property>
+					</properties>
+				</action>
 			</actions>
 			<controllers xmlns="http://xmlns.oracle.com/ide/extension">
 				<controller class="com.trivadis.sqldev.example110.ExampleController">
-					<!-- TODO: remove if not necessary -->
 					<update-rules>
 						<update-rule rule="always-enabled">
 							<action id="EXAMPLE_CONTEXT_MENU_1_ACTION_ID" />
 							<action id="EXAMPLE_CONTEXT_MENU_2_ACTION_ID" />
+							<action id="EXAMPLE_CONTEXT_MENU_3_ACTION_ID" />
 						</update-rule>
 					</update-rules>
 				</controller>
@@ -52,7 +58,7 @@
 				<menu>
 					<section xmlns="http://jcp.org/jsr/198/extension-manifest"
 						id="EXAMPLE_CONTEXT_MENU_SECTION_ID" weight="0.1">
-						<item action-ref="EXAMPLE_CONTEXT_MENU_2_ACTION_ID" />
+						<item action-ref="EXAMPLE_CONTEXT_MENU_3_ACTION_ID" />
 					</section>
 				</menu>
 			</context-menu-hook>
@@ -61,7 +67,12 @@
 
 	<!-- register context menu listener -->
 	<hooks>
-		<jdeveloper-hook>
+		<jdeveloper-hook xmlns="http://xmlns.oracle.com/jdeveloper/1013/extension">
+			<!-- disabled, another option to add initialize the menu listener
+			<addins>
+				<addin>com.trivadis.sqldev.example110.ExampleAddin</addin>
+			</addins>
+			-->
 			<context-menu-listeners>
 				<!-- TODO: fix, this does not work for DisplayEditableResultTable or DisplayResultTable or ... -->
 				<site idref="editor"> 
