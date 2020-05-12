@@ -14,6 +14,7 @@ public class ExampleMenuListener implements ContextMenuListener {
 	
 	public ExampleMenuListener() {
 		super();
+		logger.fine("menu listener initialized.");
 	}
 	
 	@Override
