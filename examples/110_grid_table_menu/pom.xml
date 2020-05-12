@@ -52,6 +52,13 @@
 			<scope>system</scope>
 			<systemPath>${sqldev.basedir}/ide/extensions/oracle.ide.jar</systemPath>
 		</dependency>
+		<dependency>
+			<groupId>oracle</groupId>
+			<artifactId>oracle.sqldeveloper.utils</artifactId>
+			<version>12.2.0</version>
+			<scope>system</scope>
+			<systemPath>${sqldev.basedir}/sqldeveloper/extensions/oracle.sqldeveloper.utils.jar</systemPath>
+		</dependency>
 	</dependencies>
 
 	<!-- Build Settings -->
@@ -213,6 +220,7 @@
 						</Include-Resource>
 						<Require-Bundle>
 							oracle.sqldeveloper,
+							oracle.sqldeveloper.utils,
 							oracle.ide,
 							oracle.javatools-nodeps,
 							oracle.uic,
