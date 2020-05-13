@@ -20,10 +20,8 @@ public class ExampleGridContextMenuItem extends GridContextMenuItem {
 	
 	@Override
 	protected boolean canShow(ContextMenu contextMenu) {
-		// and any other preconditions besides 'just' RaptorGridTable _table != null
-		Object table = contextMenu.getContext().getProperty("RaptorGridTableCtxProperty");
-		if (table instanceof RaptorGridTable) {
-			gridTable = (RaptorGridTable) table;
+		gridTable = RaptorGridTable.getRaptorGridTable(contextMenu.getContext());
+		if (gridTable != null) {
 			return true;
 		}
 		return false;
