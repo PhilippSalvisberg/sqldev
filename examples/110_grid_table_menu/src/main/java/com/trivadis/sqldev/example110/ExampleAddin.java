@@ -12,6 +12,12 @@ import oracle.ide.controller.ContextMenu;
 public class ExampleAddin implements Addin {
 
 	private static final Logger logger = Logger.getLogger(ExampleAddin.class.getName());
+	private static RaptorGridTable gridTable;
+	
+	public static RaptorGridTable getContextGridTable() {
+		// workaround to keep the selected table in case of parent/child reports
+		return gridTable;
+	}
 
 	@Override
 	public void initialize() {
@@ -26,7 +32,12 @@ public class ExampleAddin implements Addin {
 			@Override
 			protected boolean canShow(ContextMenu contextMenu) {
 				// and any other preconditions besides 'just' RaptorGridTable _table != null
-				return true;
+				Object table = contextMenu.getContext().getProperty("RaptorGridTableCtxProperty");
+				if (table instanceof RaptorGridTable) {
+					gridTable = (RaptorGridTable) table;
+					return true;
+				}
+				return false;
 			}
 
 			/**

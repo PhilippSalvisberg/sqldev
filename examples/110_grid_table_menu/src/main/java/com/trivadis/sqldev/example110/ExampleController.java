@@ -1,20 +1,9 @@
 package com.trivadis.sqldev.example110;
 
 import java.awt.Component;
-import java.awt.Container;
-import java.awt.IllegalComponentStateException;
-import java.awt.MenuContainer;
-import java.awt.MouseInfo;
-import java.awt.Point;
-import java.awt.Rectangle;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.logging.Logger;
 
 import javax.swing.JOptionPane;
-import javax.swing.JPopupMenu;
-import javax.swing.JSplitPane;
-import javax.swing.SwingUtilities;
 
 import oracle.dbtools.raptor.controls.grid.RaptorGridTable;
 import oracle.dbtools.raptor.oviewer.xmleditor.XMLBasedEditor;
@@ -25,7 +14,6 @@ import oracle.ide.Context;
 import oracle.ide.Ide;
 import oracle.ide.controller.Controller;
 import oracle.ide.controller.IdeAction;
-import oracle.ide.controls.MenuItem;
 import oracle.ide.view.View;
 
 public class ExampleController implements Controller {
@@ -52,54 +40,21 @@ public class ExampleController implements Controller {
 		if (component instanceof RaptorGridTable) {
 			return getSelectedValue((RaptorGridTable)component);
 		}
-		return "";
-	}
-
-	private static List<Component> getAllComponents(Container container) {
-		List<Component> components = new ArrayList<>();
-		for (Component c : container.getComponents()) {
-			components.add(c);
-			if (c instanceof Container) {
-				components.addAll(getAllComponents((Container) c));
-			}
-		}
-		return components;
-	}
-	
-	private static Point getLocation(Context context) {
-		Object source = context.getEvent().getSource();
-		if (source instanceof MenuItem) {
-			 MenuContainer parent = ((MenuItem)source).getParent();
-			 if (parent instanceof JPopupMenu) {
-				 JPopupMenu menu = (JPopupMenu)parent;
-				 try {
-					 return menu.getLocationOnScreen();
-				 } catch (IllegalComponentStateException e) {
-					 logger.warning("cannot get location of popup menu.");
-				 }
-			 }
-		}
-		return MouseInfo.getPointerInfo().getLocation();
+		return null;
 	}
 
 	private void show (String message, Context context) {
 		View view = context.getView();
 		Component viewGui = view.getGUI();
-		String selectedValue = "";
+		String selectedValue = null;
 		if (viewGui instanceof RaptorGridTable) {
 			selectedValue = getSelectedValue(viewGui);
 		} else if (view instanceof XMLBasedEditor) {
-			if (viewGui instanceof JSplitPane) {
-				Point location = getLocation(context);
-				for (Component c : getAllComponents(((JSplitPane)viewGui))) {
-					if (c instanceof RaptorGridTable) {
-						Rectangle rect = SwingUtilities.convertRectangle(c, c.getBounds(), null);
-						if (rect.contains(location)) {
-							selectedValue = getSelectedValue(c);
-						}
-					}
-				}
+			if (ExampleAddin.getContextGridTable() != null) {
+				// parent or child table; the selected table is not available in the context
+				selectedValue = getSelectedValue(ExampleAddin.getContextGridTable());
 			} else {
+				// parent table only
 				selectedValue = getSelectedValue(((XMLBasedEditor)view).getMainUI().getUI());
 			}
 		} else if (view instanceof Worksheet) {
