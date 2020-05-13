@@ -54,11 +54,33 @@
 		</dependency>
 		<dependency>
 			<groupId>oracle</groupId>
+			<artifactId>oracle.sqldeveloper</artifactId>
+			<version>12.2.0</version>
+			<scope>system</scope>
+			<systemPath>${sqldev.basedir}/sqldeveloper/extensions/oracle.sqldeveloper.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>oracle</groupId>
 			<artifactId>oracle.sqldeveloper.utils</artifactId>
 			<version>12.2.0</version>
 			<scope>system</scope>
 			<systemPath>${sqldev.basedir}/sqldeveloper/extensions/oracle.sqldeveloper.utils.jar</systemPath>
 		</dependency>
+		<dependency>
+			<groupId>oracle</groupId>
+			<artifactId>oracle.sqldeveloper.worksheet</artifactId>
+			<version>12.2.0</version>
+			<scope>system</scope>
+			<systemPath>${sqldev.basedir}/sqldeveloper/extensions/oracle.sqldeveloper.worksheet.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>oracle</groupId>
+			<artifactId>javatools</artifactId>
+			<version>12.2.0</version>
+			<scope>system</scope>
+			<systemPath>${sqldev.basedir}/ide/lib/javatools.jar</systemPath>
+		</dependency>
+
 	</dependencies>
 
 	<!-- Build Settings -->
@@ -222,9 +244,12 @@
 							oracle.sqldeveloper,
 							oracle.sqldeveloper.utils,
 							oracle.ide,
+							oracle.ide.ceditor,
+							oracle.javatools,
 							oracle.javatools-nodeps,
 							oracle.uic,
-							oracle.idert
+							oracle.idert,
+							oracle.sqldeveloper.worksheet
 						</Require-Bundle>
 						<Import-Package>!*</Import-Package>
 						<Embed-Directory>lib</Embed-Directory>
