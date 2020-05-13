@@ -8,9 +8,9 @@ import oracle.dbtools.raptor.controls.grid.RaptorGridTable;
 import oracle.dbtools.raptor.controls.grid.contextmenu.GridContextMenuItem;
 import oracle.ide.controller.ContextMenu;
 
-public class ExampleGridContextMenuItem extends GridContextMenuItem {
+public class ExampleContextMenu extends GridContextMenuItem {
 
-	private static final Logger logger = Logger.getLogger(ExampleGridContextMenuItem.class.getName());
+	private static final Logger logger = Logger.getLogger(ExampleContextMenu.class.getName());
 	private static RaptorGridTable gridTable;
 
 	public static RaptorGridTable getContextGridTable() {

@@ -50,9 +50,9 @@ public class ExampleController implements Controller {
 		if (viewGui instanceof RaptorGridTable) {
 			selectedValue = getSelectedValue(viewGui);
 		} else if (view instanceof XMLBasedEditor) {
-			if (ExampleGridContextMenuItem.getContextGridTable() != null) {
+			if (ExampleContextMenu.getContextGridTable() != null) {
 				// parent or child table; the selected table is not available in the context
-				selectedValue = getSelectedValue(ExampleGridContextMenuItem.getContextGridTable());
+				selectedValue = getSelectedValue(ExampleContextMenu.getContextGridTable());
 			} else {
 				// parent table only
 				selectedValue = getSelectedValue(((XMLBasedEditor)view).getMainUI().getUI());

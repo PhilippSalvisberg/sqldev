@@ -12,7 +12,7 @@ public class ExampleAddin implements Addin {
 	
 	@Override
 	public void initialize() {
-		GridContextMenuItem menuListener = new ExampleGridContextMenuItem();
+		GridContextMenuItem menuListener = new ExampleContextMenu();
 		RaptorGridTable.addGridContextMenu(menuListener);
 		logger.fine("addin initialized.");
 	}
