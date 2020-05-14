@@ -45,6 +45,7 @@ public class ExampleController implements Controller {
 					sb.append(tab.getDisplayValueAt(selRow, selCol, -1));
 				}
 			}
+			sb.append("\n");
 		}
 		return sb.toString();
 	}
