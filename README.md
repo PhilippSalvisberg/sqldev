@@ -102,6 +102,12 @@ Show a new dockable window via main menu action.
 
 <img alt="Dockable Window" src="./workshop/100_add_dockable_window/images/drop_on_welcome_tab.png" height="150"/>
 
+### [110 - Extend Context Menu of Grid Table](https://github.com/PhilippSalvisberg/sqldev/blob/master/workshop/110_grid_table_menu/README.md#extend-context-menu-of-grid-table)
+
+Extend the context menu of any grid table (query results, reports, editors, etc.) in SQL Developer. 
+
+<img alt="Action via Context Menu of Grid Table" src="./workshop/110_grid_table_menu/images/context_menu_for_multiple_cells_in_query_result.png" height="150"/>
+
 # Documentation
 
 ## In this Repository
