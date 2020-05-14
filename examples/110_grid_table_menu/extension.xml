@@ -17,7 +17,7 @@
 		</type>
 	</feature>
 
-	<!-- register dockable factories, actions, controllers and menu items -->
+	<!-- register actions, controllers and menu items -->
 	<trigger-hooks
 		xmlns="http://xmlns.oracle.com/ide/extension">
 		<triggers xmlns:c="http://xmlns.oracle.com/ide/customization">
@@ -45,10 +45,21 @@
 					</update-rules>
 				</controller>
 			</controllers>
+			<!-- ESDK 2.0 requires some event to load the extension. -->
+			<!-- The main toolbar should be always visible. Therefore the extension will be loaded "automatically." -->
+			<menu-hook xmlns="http://jcp.org/jsr/198/extension-manifest">
+				<toolbars>
+					<toolbar id="javax.ide.view.MAIN_WINDOW_TOOLBAR_ID">
+						<section id="EXAMPLE_TOOLBAR_SECTION_ID" displayName="Example" weight="110.0f">
+							<item action-ref="EXAMPLE_CONTEXT_MENU_2_ACTION_ID"/>
+						</section>
+					</toolbar>
+				</toolbars>
+			</menu-hook>
 		</triggers>
 	</trigger-hooks>
 
-	<!-- register context menu listener -->
+	<!-- register context menu listener, after loading the extension -->
 	<hooks>
 		<jdeveloper-hook xmlns="http://xmlns.oracle.com/jdeveloper/1013/extension">
 			<addins>
