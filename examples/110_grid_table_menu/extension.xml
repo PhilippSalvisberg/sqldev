@@ -46,7 +46,7 @@
 				</controller>
 			</controllers>
 			<!-- ESDK 2.0 requires some event to load the extension. -->
-			<!-- The main toolbar should be always visible. Therefore the extension will be loaded "automatically." -->
+			<!-- The main toolbar should always be visible. Therefore, the extension is loaded without user interaction. -->
 			<menu-hook xmlns="http://jcp.org/jsr/198/extension-manifest">
 				<toolbars>
 					<toolbar id="javax.ide.view.MAIN_WINDOW_TOOLBAR_ID">
