@@ -2,7 +2,7 @@
 
 ## 1. Start Eclipse
 
-Start Eclipse and select the `sqldev` workspace created in [Create Bundled XML Extension](https://github.com/PhilippSalvisberg/sqldev/tree/master/workshop/050_create_bundled_xml_extension).
+Start Eclipse and select the `sqldev` workspace created in [Create Bundled XML Extension](https://github.com/PhilippSalvisberg/sqldev/tree/main/workshop/050_create_bundled_xml_extension).
 
 ## 2. Open example `060_menubar`
 
@@ -66,22 +66,22 @@ And Press `Yes` to restart SQL Developer.
 
 ![File Menu](./images/file_menu.png)
 
-The `File menu item` is added in [`extensions.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/060_menubar/extension.xml#L139-L143).
+The `File menu item` is added in [`extensions.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/main/examples/060_menubar/extension.xml#L139-L143).
 
-The label is configured in [`ExampleResources.properties`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/060_menubar/src/main/resources/com/trivadis/sqldev/example60/ExampleResources.properties#L15).
+The label is configured in [`ExampleResources.properties`](https://github.com/PhilippSalvisberg/sqldev/blob/main/examples/060_menubar/src/main/resources/com/trivadis/sqldev/example60/ExampleResources.properties#L15).
 
 ### 7.2 Custom Menu
 
 ![Custom Menu](./images/custom_menu.png)
 
-The complete custom menu is added in [`extensions.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/060_menubar/extension.xml#L186-L204).
+The complete custom menu is added in [`extensions.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/main/examples/060_menubar/extension.xml#L186-L204).
 
-The icons are configured in [`ExampleResources.properties`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/060_menubar/src/main/resources/com/trivadis/sqldev/example60/ExampleResources.properties#L10-L12).
+The icons are configured in [`ExampleResources.properties`](https://github.com/PhilippSalvisberg/sqldev/blob/main/examples/060_menubar/src/main/resources/com/trivadis/sqldev/example60/ExampleResources.properties#L10-L12).
 
 The accellerator `Ctrl+Shift+A` is configured in 
 
-- [`extensions.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/060_menubar/extension.xml#L208-L210)
-- [`accelerators.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/060_menubar/src/main/resources/com/trivadis/sqldev/example60/accelerators.xml)
+- [`extensions.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/main/examples/060_menubar/extension.xml#L208-L210)
+- [`accelerators.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/main/examples/060_menubar/src/main/resources/com/trivadis/sqldev/example60/accelerators.xml)
 
 Press `Ctrl+Shift+A` to show the following dialog (value for CmdID may differ):
 
@@ -91,54 +91,54 @@ Press `Ctrl+Shift+A` to show the following dialog (value for CmdID may differ):
 
 ![Edit Menu](./images/edit_menu.png)
 
-The `Edit menu item 1` is added in [`extensions.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/060_menubar/extension.xml#L144-L148).
+The `Edit menu item 1` is added in [`extensions.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/main/examples/060_menubar/extension.xml#L144-L148).
 
 ### 7.4 View Menu
 
 ![View Menu](./images/view_menu.png)
 
-The `View menu item 1`, `View menu item 2` and `View menu item 3` are added in [`extensions.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/060_menubar/extension.xml#L149-L155).
+The `View menu item 1`, `View menu item 2` and `View menu item 3` are added in [`extensions.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/main/examples/060_menubar/extension.xml#L149-L155).
 
 ### 7.5 Navigate Menu
 
 ![Navigate Menu](./images/navigate_menu.png)
 
-The `View menu item 1` is added in [`extensions.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/060_menubar/extension.xml#L156-L160).
+The `View menu item 1` is added in [`extensions.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/main/examples/060_menubar/extension.xml#L156-L160).
 
 ### 7.6 Run Menu
 
 ![Run Menu](./images/run_menu.png)
 
-The `Run menu item 1` is added in [`extensions.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/060_menubar/extension.xml#L161-L165).
+The `Run menu item 1` is added in [`extensions.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/main/examples/060_menubar/extension.xml#L161-L165).
 
 ### 7.7 Team Menu
 
 ![Team Menu](./images/team_menu.png)
 
-The `Team menu item 1` is added in [`extensions.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/060_menubar/extension.xml#L166-L170).
+The `Team menu item 1` is added in [`extensions.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/main/examples/060_menubar/extension.xml#L166-L170).
 
 ### 7.8 Tools Menu
 
 ![Tools Menu](./images/tools_menu.png)
 
-The `Tools menu item 1` is added in [`extensions.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/060_menubar/extension.xml#L171-L175).
+The `Tools menu item 1` is added in [`extensions.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/main/examples/060_menubar/extension.xml#L171-L175).
 
 ### 7.9 Window Menu
 
 ![Window Menu](./images/window_menu.png)
 
-The `Window menu item 1` is added in [`extensions.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/060_menubar/extension.xml#L176-L180).
+The `Window menu item 1` is added in [`extensions.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/main/examples/060_menubar/extension.xml#L176-L180).
 
 ### 7.10 Help Menu
 
 ![Help Menu](./images/help_menu.png)
 
-The `Help menu item 1` is added in [`extensions.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/060_menubar/extension.xml#L181-L185).
+The `Help menu item 1` is added in [`extensions.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/main/examples/060_menubar/extension.xml#L181-L185).
 
 ## 8. Important Artefacts/Sections
 
 | Artefact | Section | Notes |
 | -------- | ------- | ----- |
-| [`extensions.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/060_menubar/extension.xml#L19-L110) | Actions | All menu items are actions. There are defined here with label and icon. |
-| [`extensions.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/060_menubar/extension.xml#L111-L135) | Controllers | Every action must be assigned to a controller to a) enable/disable the item and b) handle the action event. In this case all actions are handled by a single controller class `com.trivadis.sqldev.example60.ExampleController` |
-| [`ExampleController.java`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/060_menubar/src/main/java/com/trivadis/sqldev/example60/ExampleController.java#L24-L37) | Handle Event| This is the controller class for all events |
+| [`extensions.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/main/examples/060_menubar/extension.xml#L19-L110) | Actions | All menu items are actions. There are defined here with label and icon. |
+| [`extensions.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/main/examples/060_menubar/extension.xml#L111-L135) | Controllers | Every action must be assigned to a controller to a) enable/disable the item and b) handle the action event. In this case all actions are handled by a single controller class `com.trivadis.sqldev.example60.ExampleController` |
+| [`ExampleController.java`](https://github.com/PhilippSalvisberg/sqldev/blob/main/examples/060_menubar/src/main/java/com/trivadis/sqldev/example60/ExampleController.java#L24-L37) | Handle Event| This is the controller class for all events |

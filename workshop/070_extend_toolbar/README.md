@@ -2,7 +2,7 @@
 
 ## 1. Start Eclipse
 
-Start Eclipse and select the `sqldev` workspace created in [Create Bundled XML Extension](https://github.com/PhilippSalvisberg/sqldev/tree/master/workshop/050_create_bundled_xml_extension).
+Start Eclipse and select the `sqldev` workspace created in [Create Bundled XML Extension](https://github.com/PhilippSalvisberg/sqldev/tree/main/workshop/050_create_bundled_xml_extension).
 
 ## 2. Open example `070_toolbar`
 
@@ -68,14 +68,14 @@ Click on the first icon in the toolbar.
 
 | Artefact | Section | Notes |
 | -------- | ------- | ----- |
-| [`extensions.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/070_toolbar/extension.xml#L17-L46) |  | The toolbar, the action and the controller are defined here. |
-| [`ExampleController.java`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/070_toolbar/src/main/java/com/trivadis/sqldev/example70/ExampleController.java#L19-L23) | Handle Event| This is the controller class. The code is simplified since just one is event is handled in this controller. |
+| [`extensions.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/main/examples/070_toolbar/extension.xml#L17-L46) |  | The toolbar, the action and the controller are defined here. |
+| [`ExampleController.java`](https://github.com/PhilippSalvisberg/sqldev/blob/main/examples/070_toolbar/src/main/java/com/trivadis/sqldev/example70/ExampleController.java#L19-L23) | Handle Event| This is the controller class. The code is simplified since just one is event is handled in this controller. |
 
 ## 9. Debugging and Hot Deployment
 
-Follow the instructions in [Remote Debugging in Eclipse](https://github.com/PhilippSalvisberg/sqldev/blob/master/docs/remote-debugging.md) to set up remote debugging of an extension in SQL Developer.
+Follow the instructions in [Remote Debugging in Eclipse](https://github.com/PhilippSalvisberg/sqldev/blob/main/docs/remote-debugging.md) to set up remote debugging of an extension in SQL Developer.
 
-Set a breakpoint on line 21 in [`ExampleController.java`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/070_toolbar/src/main/java/com/trivadis/sqldev/example70/ExampleController.java#L21) in Eclipse and start the debugger.
+Set a breakpoint on line 21 in [`ExampleController.java`](https://github.com/PhilippSalvisberg/sqldev/blob/main/examples/070_toolbar/src/main/java/com/trivadis/sqldev/example70/ExampleController.java#L21) in Eclipse and start the debugger.
 
 Press the toolbar item in SQL Developer.
 

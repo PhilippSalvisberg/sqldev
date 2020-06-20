@@ -2,7 +2,7 @@
 
 ## 1. Start Eclipse
 
-Start Eclipse and select the `sqldev` workspace created in [Create Bundled XML Extension](https://github.com/PhilippSalvisberg/sqldev/tree/master/workshop/050_create_bundled_xml_extension).
+Start Eclipse and select the `sqldev` workspace created in [Create Bundled XML Extension](https://github.com/PhilippSalvisberg/sqldev/tree/main/workshop/050_create_bundled_xml_extension).
 
 ## 2. Open example `100_dockable`
 
@@ -78,8 +78,8 @@ And drop it.
 
 | Artefact | Section | Notes |
 | -------- | ------- | ----- |
-| [`extensions.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/100_dockable/extension.xml#L19-L21) | Dockable Factory | The dockable factory class `ExampleDockableFactory` is registered here with the id `EXAMPLE_FACTORY`. |
-| [`extensions.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/100_dockable/extension.xml#L54-L59) | Dockable View | The dockable view id `EXAMPLE_VIEW` is registered here. |
-| [`DockableWindow.java`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/100_dockable/src/main/java/com/trivadis/sqldev/example100/ExampleDockable.java#L36-L44) |  | The content of the dockable window is defined here. |
-| [`DockableFactory.java`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/100_dockable/src/main/java/com/trivadis/sqldev/example100/ExampleDockableFactory.java#L46-L49) |  | The dockable window is instantiated via a `showDockable` call. |
-| [`ExampleController.java`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/100_dockable/src/main/java/com/trivadis/sqldev/example100/ExampleController.java#L15) |  | Show the dockable window via action event. |
+| [`extensions.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/main/examples/100_dockable/extension.xml#L19-L21) | Dockable Factory | The dockable factory class `ExampleDockableFactory` is registered here with the id `EXAMPLE_FACTORY`. |
+| [`extensions.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/main/examples/100_dockable/extension.xml#L54-L59) | Dockable View | The dockable view id `EXAMPLE_VIEW` is registered here. |
+| [`DockableWindow.java`](https://github.com/PhilippSalvisberg/sqldev/blob/main/examples/100_dockable/src/main/java/com/trivadis/sqldev/example100/ExampleDockable.java#L36-L44) |  | The content of the dockable window is defined here. |
+| [`DockableFactory.java`](https://github.com/PhilippSalvisberg/sqldev/blob/main/examples/100_dockable/src/main/java/com/trivadis/sqldev/example100/ExampleDockableFactory.java#L46-L49) |  | The dockable window is instantiated via a `showDockable` call. |
+| [`ExampleController.java`](https://github.com/PhilippSalvisberg/sqldev/blob/main/examples/100_dockable/src/main/java/com/trivadis/sqldev/example100/ExampleController.java#L15) |  | Show the dockable window via action event. |

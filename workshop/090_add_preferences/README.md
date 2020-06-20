@@ -2,7 +2,7 @@
 
 ## 1. Start Eclipse
 
-Start Eclipse and select the `sqldev` workspace created in [Create Bundled XML Extension](https://github.com/PhilippSalvisberg/sqldev/tree/master/workshop/050_create_bundled_xml_extension).
+Start Eclipse and select the `sqldev` workspace created in [Create Bundled XML Extension](https://github.com/PhilippSalvisberg/sqldev/tree/main/workshop/050_create_bundled_xml_extension).
 
 ## 2. Open example `090_preferences`
 
@@ -92,9 +92,9 @@ Change preferences for `Example 90` and verify the the impact.
 
 | Artefact | Section | Notes |
 | -------- | ------- | ----- |
-| [`extensions.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/090_preferences/extension.xml#L70-L75) | Preferences | The class `PreferencePanel` is registered under `/preferences`. |
-| [`PreferencePanel.java`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/090_preferences/src/main/java/com/trivadis/sqldev/example90/PreferencePanel.java#L20-L28) |  | The layout is defined here. It reads the model on entry and writes it on exit. |
-| [`PreferenceModel.java`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/090_preferences/src/main/java/com/trivadis/sqldev/example90/PreferenceModel.java#L21-L35) |  | The getter and setter are defined here. The model is persisted via a provided `HashStructure`. |
-| [`ExampleController.java`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/090_preferences/src/main/java/com/trivadis/sqldev/example90/ExampleController.java#L50) | Reading Preferences | Instantiate preference model. |
-| [`ExampleController.java`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/090_preferences/src/main/java/com/trivadis/sqldev/example90/ExampleController.java#L59-L63) | Show password? | Conditional processing regarding password. |
-| [`ExampleController.java`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/090_preferences/src/main/java/com/trivadis/sqldev/example90/ExampleController.java#L65-L72) | Implicit connect? | Conditional processing regarding implicit connection |
+| [`extensions.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/main/examples/090_preferences/extension.xml#L70-L75) | Preferences | The class `PreferencePanel` is registered under `/preferences`. |
+| [`PreferencePanel.java`](https://github.com/PhilippSalvisberg/sqldev/blob/main/examples/090_preferences/src/main/java/com/trivadis/sqldev/example90/PreferencePanel.java#L20-L28) |  | The layout is defined here. It reads the model on entry and writes it on exit. |
+| [`PreferenceModel.java`](https://github.com/PhilippSalvisberg/sqldev/blob/main/examples/090_preferences/src/main/java/com/trivadis/sqldev/example90/PreferenceModel.java#L21-L35) |  | The getter and setter are defined here. The model is persisted via a provided `HashStructure`. |
+| [`ExampleController.java`](https://github.com/PhilippSalvisberg/sqldev/blob/main/examples/090_preferences/src/main/java/com/trivadis/sqldev/example90/ExampleController.java#L50) | Reading Preferences | Instantiate preference model. |
+| [`ExampleController.java`](https://github.com/PhilippSalvisberg/sqldev/blob/main/examples/090_preferences/src/main/java/com/trivadis/sqldev/example90/ExampleController.java#L59-L63) | Show password? | Conditional processing regarding password. |
+| [`ExampleController.java`](https://github.com/PhilippSalvisberg/sqldev/blob/main/examples/090_preferences/src/main/java/com/trivadis/sqldev/example90/ExampleController.java#L65-L72) | Implicit connect? | Conditional processing regarding implicit connection |

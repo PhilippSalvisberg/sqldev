@@ -49,7 +49,7 @@ end;
 	</item>
 </items>
 ```
-See [dialogs.xsd](https://github.com/oracle/oracle-db-examples/blob/master/sqldeveloper/extension/xml/schema/dialogs.xsd) for more information about the XML structure. It contains a lot of useful comments.
+See [dialogs.xsd](https://github.com/oracle/oracle-db-examples/blob/main/sqldeveloper/extension/xml/schema/dialogs.xsd) for more information about the XML structure. It contains a lot of useful comments.
 
 ## 3. Configure the XML Extension
 

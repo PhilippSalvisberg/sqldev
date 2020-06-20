@@ -201,7 +201,7 @@ SELECT 'Sprite' AS name, 'SPRITE' as value
 	</objectType>	
 </navigator>
 ```
-See [navigator.xsd](https://github.com/oracle/oracle-db-examples/blob/master/sqldeveloper/extension/xml/schema/navigator.xsd) for more information about the XML structure.
+See [navigator.xsd](https://github.com/oracle/oracle-db-examples/blob/main/sqldeveloper/extension/xml/schema/navigator.xsd) for more information about the XML structure.
 
 
 ## 3. Configure the XML Extension

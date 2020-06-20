@@ -2,7 +2,7 @@
 
 ## 1. Start Eclipse
 
-Start Eclipse and select the `sqldev` workspace created in [Create Bundled XML Extension](https://github.com/PhilippSalvisberg/sqldev/tree/master/workshop/050_create_bundled_xml_extension).
+Start Eclipse and select the `sqldev` workspace created in [Create Bundled XML Extension](https://github.com/PhilippSalvisberg/sqldev/tree/main/workshop/050_create_bundled_xml_extension).
 
 ## 2. Open example `080_context_menu`
 
@@ -84,9 +84,9 @@ You should get a dialog similar to the following.
 
 | Artefact | Section | Notes |
 | -------- | ------- | ----- |
-| [`extensions.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/080_context_menu/extension.xml#L52-L60) | Connection Context Menu Item | Extends context menu for the site `db_nav`. To determine the node a custom rule `example-dbnode-is-db-connection` is used. |
-| [`extensions.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/080_context_menu/extension.xml#L18-L25) | Rules | Here is the rule `example-dbnode-is-db-connection` defined. It checks if the node is an instance of a `DatabaseConnection` class. |
-| [`extensions.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/080_context_menu/extension.xml#L61-L69) | Editor Context Menu Item | Extends context menu for the site `editor`. In this case the context menu should be shown aloways. Hence the predefined rule `always-enabled` is used. |
-| [`extensions.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/080_context_menu/extension.xml#L27-L41) | Actions | All actions are defined here. |
-| [`extensions.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/080_context_menu/extension.xml#L27-L41) | Controllers | All actions are handled in a single controller class named `ExampleController`. |
-| [`ExampleController.java`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/080_context_menu/src/main/java/com/trivadis/sqldev/example80/ExampleController.java#L90-L101) | Handle Event| This is the controller class. The two actions are identified here and processed in dedicated private methods [`handleConnection`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/080_context_menu/src/main/java/com/trivadis/sqldev/example80/ExampleController.java#L32-L75) and [`handleEditor`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/080_context_menu/src/main/java/com/trivadis/sqldev/example80/ExampleController.java#L77-L88) |
+| [`extensions.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/main/examples/080_context_menu/extension.xml#L52-L60) | Connection Context Menu Item | Extends context menu for the site `db_nav`. To determine the node a custom rule `example-dbnode-is-db-connection` is used. |
+| [`extensions.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/main/examples/080_context_menu/extension.xml#L18-L25) | Rules | Here is the rule `example-dbnode-is-db-connection` defined. It checks if the node is an instance of a `DatabaseConnection` class. |
+| [`extensions.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/main/examples/080_context_menu/extension.xml#L61-L69) | Editor Context Menu Item | Extends context menu for the site `editor`. In this case the context menu should be shown aloways. Hence the predefined rule `always-enabled` is used. |
+| [`extensions.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/main/examples/080_context_menu/extension.xml#L27-L41) | Actions | All actions are defined here. |
+| [`extensions.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/main/examples/080_context_menu/extension.xml#L27-L41) | Controllers | All actions are handled in a single controller class named `ExampleController`. |
+| [`ExampleController.java`](https://github.com/PhilippSalvisberg/sqldev/blob/main/examples/080_context_menu/src/main/java/com/trivadis/sqldev/example80/ExampleController.java#L90-L101) | Handle Event| This is the controller class. The two actions are identified here and processed in dedicated private methods [`handleConnection`](https://github.com/PhilippSalvisberg/sqldev/blob/main/examples/080_context_menu/src/main/java/com/trivadis/sqldev/example80/ExampleController.java#L32-L75) and [`handleEditor`](https://github.com/PhilippSalvisberg/sqldev/blob/main/examples/080_context_menu/src/main/java/com/trivadis/sqldev/example80/ExampleController.java#L77-L88) |

@@ -2,7 +2,7 @@
 
 ## 1. Start Eclipse
 
-Start Eclipse and select the `sqldev` workspace created in [Create Bundled XML Extension](https://github.com/PhilippSalvisberg/sqldev/tree/master/workshop/050_create_bundled_xml_extension).
+Start Eclipse and select the `sqldev` workspace created in [Create Bundled XML Extension](https://github.com/PhilippSalvisberg/sqldev/tree/main/workshop/050_create_bundled_xml_extension).
 
 ## 2. Open example `052_bundled_multilingual`
 
@@ -90,7 +90,7 @@ You find the `Alle Objekte` report in the `Berichte` window.
 
 ![Reports](./images/berichte.png)
 
-The report is translated in [`all_objects_de.xliff`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/052_bundled_multilingual/src/main/resources/com/trivadis/sqldev/example52/report/all_objects_de.xliff#L6-L7).
+The report is translated in [`all_objects_de.xliff`](https://github.com/PhilippSalvisberg/sqldev/blob/main/examples/052_bundled_multilingual/src/main/resources/com/trivadis/sqldev/example52/report/all_objects_de.xliff#L6-L7).
 
 Please note, that column names cannot be translated.
 
@@ -100,7 +100,7 @@ Open a connection, click on the `Tabellen` node, click on a table and then on th
 
 ![Tabellen Eigenschaften](./images/tabellen_eigenschaften.png)
 
-The editor is translated in [`properties_de.xliff`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/052_bundled_multilingual/src/main/resources/com/trivadis/sqldev/example52/editor/properties_de.xliff#L6-L7).
+The editor is translated in [`properties_de.xliff`](https://github.com/PhilippSalvisberg/sqldev/blob/main/examples/052_bundled_multilingual/src/main/resources/com/trivadis/sqldev/example52/editor/properties_de.xliff#L6-L7).
 
 ### 9.3 Navigator and Editors for `Getränke`
 
@@ -110,21 +110,21 @@ Open a connection, click on the `Getränke` node, expand all nodes and click on 
 
 Please note that the structure differs from the previous example. The folders for `Alcoholic` and `Non-Alcoholic` are missing. 
 
-Have a look at [`drinks-navigator.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/052_bundled_multilingual/src/main/resources/com/trivadis/sqldev/example52/navigator/drinks-navigator.xml) how the non-translateable column names have been replaced. Look for `icon` and `label` tags.
+Have a look at [`drinks-navigator.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/main/examples/052_bundled_multilingual/src/main/resources/com/trivadis/sqldev/example52/navigator/drinks-navigator.xml) how the non-translateable column names have been replaced. Look for `icon` and `label` tags.
 
-All translations are stored in [ExampleResources_de.properties](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/052_bundled_multilingual/src/main/resources/com/trivadis/sqldev/example52/ExampleResources_de.properties).
+All translations are stored in [ExampleResources_de.properties](https://github.com/PhilippSalvisberg/sqldev/blob/main/examples/052_bundled_multilingual/src/main/resources/com/trivadis/sqldev/example52/ExampleResources_de.properties).
 
 Click on the `Cola` node.
 
 ![Cola Nährwerte](./images/cola_nutrition.png)
 
-The editor is translated in [`drinks-editors_de.xliff`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/052_bundled_multilingual/src/main/resources/com/trivadis/sqldev/example52/editor/drinks-editors_de.xliff#L6-L7).
+The editor is translated in [`drinks-editors_de.xliff`](https://github.com/PhilippSalvisberg/sqldev/blob/main/examples/052_bundled_multilingual/src/main/resources/com/trivadis/sqldev/example52/editor/drinks-editors_de.xliff#L6-L7).
 
 Click on the `Zutaten` tab.
 
 ![Cola Zutaten](./images/cola_ingredients.png)
 
-The editor is translated in [`drinks-editors_de.xliff`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/052_bundled_multilingual/src/main/resources/com/trivadis/sqldev/example52/editor/drinks-editors_de.xliff#L10-L11).
+The editor is translated in [`drinks-editors_de.xliff`](https://github.com/PhilippSalvisberg/sqldev/blob/main/examples/052_bundled_multilingual/src/main/resources/com/trivadis/sqldev/example52/editor/drinks-editors_de.xliff#L10-L11).
 
 ### 9.4 Context Menu `Erstelle Tabelle via Select`
 
@@ -140,9 +140,9 @@ Press the `OK` button.
 
 ![Confirmation dialog](./images/confirmation_dialog.png)
 
-Please note that `Beispieldaten (zufällig)?` is now a checkbox. See [`ctas_plsql.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/052_bundled_multilingual/src/main/resources/com/trivadis/sqldev/example52/action/ctas_plsql.xml#L11-L14).
+Please note that `Beispieldaten (zufällig)?` is now a checkbox. See [`ctas_plsql.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/main/examples/052_bundled_multilingual/src/main/resources/com/trivadis/sqldev/example52/action/ctas_plsql.xml#L11-L14).
 
-The action is translated in [`ctas_plsql_de.xliff`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/052_bundled_multilingual/src/main/resources/com/trivadis/sqldev/example52/action/ctas_plsql_de.xliff#L5-L28).
+The action is translated in [`ctas_plsql_de.xliff`](https://github.com/PhilippSalvisberg/sqldev/blob/main/examples/052_bundled_multilingual/src/main/resources/com/trivadis/sqldev/example52/action/ctas_plsql_de.xliff#L5-L28).
 
 ## 10. Close SQL Developer
 

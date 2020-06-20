@@ -133,9 +133,9 @@ Open a connection, click on the `Drinks` node, expand all nodes and click on the
 
 Please note that the icons are different to the user defined extension. For that the follwing files have been added:
 
-- [`Icons`](https://github.com/PhilippSalvisberg/sqldev/tree/master/examples/050_bundled/src/main/resources/com/trivadis/sqldev/example50/images)
-- [`ExampleResource.properties`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/050_bundled/src/main/resources/com/trivadis/sqldev/example50/ExampleResources.properties)
-- [`ExampleResources.java`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/050_bundled/src/main/java/com/trivadis/sqldev/example50/ExampleResources.java)
+- [`Icons`](https://github.com/PhilippSalvisberg/sqldev/tree/main/examples/050_bundled/src/main/resources/com/trivadis/sqldev/example50/images)
+- [`ExampleResource.properties`](https://github.com/PhilippSalvisberg/sqldev/blob/main/examples/050_bundled/src/main/resources/com/trivadis/sqldev/example50/ExampleResources.properties)
+- [`ExampleResources.java`](https://github.com/PhilippSalvisberg/sqldev/blob/main/examples/050_bundled/src/main/java/com/trivadis/sqldev/example50/ExampleResources.java)
 
 In line 1 of [`drinks-navigator.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/6f87006d20d9260b6ea786b4b85878d84a540e6a/examples/050_bundled/src/main/resources/com/trivadis/sqldev/example50/navigator/drinks-navigator.xml#L1) the `RESOURCE_FILE` references the Java class to load resources.
 
@@ -163,14 +163,14 @@ Enter a `New table name`, select `75` percent and press the `Apply` button.
 
 Have a look at the following files to understand how the extension is build:
 
-- [`bundle.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/050_bundled/bundle.xml) - the placeholders `#EXTENSION_NAME#`, `#EXTENSION_VERSION#`, `#EXTENSION_OWNER#`, `#EXTENSION_DESCRIPTION#` and `#MIN_SQLDEV_VERSION#` are replaced during build. The properties are defined in 
-  - [`ExampleResource.properties`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/050_bundled/src/main/resources/com/trivadis/sqldev/example50/ExampleResources.properties#L4-L7)
-  - [`pom.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/050_bundled/pom.xml#L159)
+- [`bundle.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/main/examples/050_bundled/bundle.xml) - the placeholders `#EXTENSION_NAME#`, `#EXTENSION_VERSION#`, `#EXTENSION_OWNER#`, `#EXTENSION_DESCRIPTION#` and `#MIN_SQLDEV_VERSION#` are replaced during build. The properties are defined in 
+  - [`ExampleResource.properties`](https://github.com/PhilippSalvisberg/sqldev/blob/main/examples/050_bundled/src/main/resources/com/trivadis/sqldev/example50/ExampleResources.properties#L4-L7)
+  - [`pom.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/main/examples/050_bundled/pom.xml#L159)
 
-- [`extension.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/050_bundled/extension.xml) - all XML extensions are registered here. Placeholders are replaced as in `bundle.xml`.
+- [`extension.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/main/examples/050_bundled/extension.xml) - all XML extensions are registered here. Placeholders are replaced as in `bundle.xml`.
 
-- [`pom.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/050_bundled/pom.xml) - Maven file containing all steps to produce the installable extension (ZIP file).
+- [`pom.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/main/examples/050_bundled/pom.xml) - Maven file containing all steps to produce the installable extension (ZIP file).
 
-- [`sqldev_assembly.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/050_bundled/sqldev_assembly.xml) - The `maven-assembly-plugin` uses this configuration file in the [`pom.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/050_bundled/pom.xml#L227) to build the ZIP file.
+- [`sqldev_assembly.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/main/examples/050_bundled/sqldev_assembly.xml) - The `maven-assembly-plugin` uses this configuration file in the [`pom.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/main/examples/050_bundled/pom.xml#L227) to build the ZIP file.
 
-- [`sqldeveloper.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/master/examples/050_bundled/sqldeveloper.xml) - Optional update site as an alternative to the ZIP file. Placeholders are replaced as in `bundle.xml`. The path to the extension ZIP File needs to be adjusted.
+- [`sqldeveloper.xml`](https://github.com/PhilippSalvisberg/sqldev/blob/main/examples/050_bundled/sqldeveloper.xml) - Optional update site as an alternative to the ZIP file. Placeholders are replaced as in `bundle.xml`. The path to the extension ZIP File needs to be adjusted.
