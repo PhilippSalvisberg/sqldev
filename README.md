@@ -54,7 +54,7 @@ Beside accessing the database you may access also Java classes thanks to the [Na
 
 SQL Developer extensions are ZIP files in a specific format. The format is defined in the [JDeveloper's Extension Software Development Kit (ESDK) version 2.0](https://docs.oracle.com/middleware/1212/jdev/OJDEG/toc.htm).
 
-These tutorials bundle the previously created XML extensions into a single extension (ZIP file). The `Java` code is reduced to a single file to handle custom resources, e.g. icons. The final ZIP file is build by Maven.
+These tutorials bundle the previously created XML extensions into a single extension (ZIP file). The `Java` code is reduced to a single file to handle custom resources, e.g. icons. The final ZIP file is built by Maven.
 
 ### [050 - Create Bundled XML Extension](https://github.com/PhilippSalvisberg/sqldev/tree/main/workshop/050_create_bundled_xml_extension/README.md#create-bundled-xml-extension)
 
