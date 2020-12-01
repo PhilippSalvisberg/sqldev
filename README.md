@@ -119,10 +119,10 @@ Extend the context menu of any grid table (query results, reports, editors, etc.
 ## External Links
 
 - JDeveloper
-  - [JDeveloper History](https://www.oracle.com/technetwork/developer-tools/jdev/jdev-history-099970.html)
-  - [JDevelopers's Extension Software Development Kit (EDSK)](https://www.oracle.com/technetwork/testcontent/index-091862.html)
-  - [EDSK v2.0 JavaDoc (12c)](https://docs.oracle.com/middleware/12213/jdev/api-reference-esdk/toc.htm)
-  - [Fusion Middleware Developer's Guide for Oracle JDeveloper Extensions (12c)](https://docs.oracle.com/middleware/1212/jdev/OJDEG/toc.htm)
+  - [JDeveloper History](https://www.oracle.com/application-development/technologies/jdeveloper/jdev-history.html)
+  - [JDevelopers's Extension Software Development Kit (EDSK)](https://www.oracle.com/tools/downloads/jdeveloper-extension-sdk.html)
+  - [EDSK v2.0 JavaDoc (12.2.1.4.0)](https://docs.oracle.com/en/middleware/developer-tools/jdeveloper/12.2.1.4/api-reference-esdk/index.html)
+  - [Fusion Middleware Developer's Guide for Oracle JDeveloper Extensions (12.2.1.4.0)](https://docs.oracle.com/en/middleware/developer-tools/jdeveloper/12.2.1.4/develop-extensions/index.html)
 
 - SQL Developer
   - [SQL Developer Documentation](https://docs.oracle.com/en/database/oracle/sql-developer/)
