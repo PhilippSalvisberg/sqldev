@@ -19,3 +19,7 @@ This mapping is relevant, if an extension requires a certain SQL Developer versi
 | 18.3.0 | 18.3.0.277.2354 | |
 | 18.4.0 | 18.4.0.376.1900 | |
 | 19.1.0 | 19.1.0.094.2042 | |
+| 19.2.0 | 19.2.0.206.2117 | |
+| 19.2.1 | 19.2.1.247.2212 | |
+| 19.4.0 | 19.3.0.354.1759 | no 19.3.0 released, 19.4.0 is the external version! |
+| 20.2.0 | 20.2.0.175.1842 | no 20.1.0 released |
