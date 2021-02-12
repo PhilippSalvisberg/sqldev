@@ -2,7 +2,7 @@
 
 This mapping is relevant, if an extension requires a certain SQL Developer version or range of versions. The version defined in the `META-INF/extensions.xml` within the `oracle.sqldeveloper.jar` is relevant.
 
-| SQL Developer verison | extension version | Notes |
+| SQL Developer version | extension version | Notes |
 | --------------------- | ----------------- | ----- |
 | 4.0.3 | 12.2.0.16.84 | last version based on JDK7 |
 | 4.1.0 | 12.2.0.19.07 | first version based on JDK8 |
@@ -23,3 +23,4 @@ This mapping is relevant, if an extension requires a certain SQL Developer versi
 | 19.2.1 | 19.2.1.247.2212 | |
 | 19.4.0 | 19.3.0.354.1759 | no 19.3.0 released, 19.4.0 is the external version! |
 | 20.2.0 | 20.2.0.175.1842 | no 20.1.0 released |
+| 20.4.0 | 20.4.0.379.2205 | no 20.3.0 released |
