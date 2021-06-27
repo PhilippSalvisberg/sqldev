@@ -4,6 +4,7 @@ This mapping is relevant, if an extension requires a certain SQL Developer versi
 
 | SQL Developer version | extension version | Notes |
 | --------------------- | ----------------- | ----- |
+| 3.2.20 | 11.2.0.09.87 | last version based on ESDK 1.0 and JDK 6 |
 | 4.0.3 | 12.2.0.16.84 | last version based on JDK7 |
 | 4.1.0 | 12.2.0.19.07 | first version based on JDK8 |
 | 4.1.1 | 12.2.0.19.59 | |
@@ -24,3 +25,4 @@ This mapping is relevant, if an extension requires a certain SQL Developer versi
 | 19.4.0 | 19.3.0.354.1759 | no 19.3.0 released, 19.4.0 is the external version! |
 | 20.2.0 | 20.2.0.175.1842 | no 20.1.0 released |
 | 20.4.0 | 20.4.0.379.2205 | no 20.3.0 released |
+| 20.4.1 | 20.4.1.407.0006 | |
