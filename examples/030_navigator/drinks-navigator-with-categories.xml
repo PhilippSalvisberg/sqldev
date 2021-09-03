@@ -1,0 +1,141 @@
+<navigator RESOURCE_FILE="oracle.dbtools.raptor.navigator.OracleNavigatorResource">
+	<categoryType connType="Oracle" id="drinks-category" weight="203">
+		<folder>
+			<icon RSKEY="OracleIcons.HOME"></icon>
+			<label RSKEY="Drinks"/>
+		</folder>
+	</categoryType>
+	<objectType connType="Oracle" id="drinks-water" category="drinks-category" weight="5">
+		<folder>
+			<icon RSKEY="OracleIcons.LIGHTBULB"></icon>
+			<label RSKEY="Water"/>
+			<queries>
+				<query>
+					<sql  constrained="true">
+						<![CDATA[
+SELECT null AS name, null as type FROM dual WHERE 1=2
+						]]>
+					</sql>
+				</query>
+			</queries>
+		</folder>
+	</objectType>
+	<objectType connType="Oracle" id="drinks-alcoholic" category="drinks-category" weight="10">
+		<folder>
+			<icon RSKEY="OracleIcons.TEAM"></icon>
+			<label RSKEY="Alcoholic"/>
+			<queries>
+				<query>
+					<sql  constrained="true">
+						<![CDATA[
+SELECT 'Beer' AS name, 'drinks-beer' as type FROM dual
+UNION ALL
+SELECT 'Cider' AS name, 'drinks-cider' as type FROM dual
+UNION ALL
+SELECT 'Distilled' AS name, 'drinks-distilled' as type FROM dual
+UNION ALL
+SELECT 'Hard soda' AS name, 'drinks-hard-soda' as type FROM dual
+UNION ALL
+SELECT 'Wine' AS name, 'drinks-wine' as type FROM dual
+						]]>
+					</sql>
+				</query>
+			</queries>
+		</folder>
+	</objectType>
+	<objectType connType="Oracle" id="drinks-beer">
+		<node>
+			<icon RSKEY="OracleIcons.DEBUG" />
+		</node>
+	</objectType>	
+	<objectType connType="Oracle" id="drinks-cider">
+		<node>
+			<icon RSKEY="OracleIcons.DEBUG_YELLOW" />
+		</node>
+	</objectType>
+	<objectType connType="Oracle" id="drinks-distilled">
+		<node>
+			<icon RSKEY="OracleIcons.DEBUG_BLUE" />
+		</node>
+	</objectType>
+	<objectType connType="Oracle" id="drinks-hard-soda">
+		<node>
+			<icon RSKEY="OracleIcons.DUKE" />
+		</node>
+	</objectType>	
+	<objectType connType="Oracle" id="drinks-wine">
+		<node>
+			<icon RSKEY="OracleIcons.DEBUG_PURPLE" />
+		</node>
+	</objectType>
+	<objectType connType="Oracle" id="drinks-non-alcoholic" category="drinks-category" weight="20">
+		<folder>
+			<icon RSKEY="OracleIcons.SCHEMA_FOLDER"></icon>
+			<label RSKEY="Non-Alcoholic"/>
+			<queries>
+				<query>
+					<sql  constrained="true">
+						<![CDATA[
+SELECT 'Caffeinated' AS name, 'drinks-caffeinated' as type FROM dual
+UNION ALL
+SELECT 'Chocolate' AS name, 'drinks-chocolate' as type FROM dual
+UNION ALL
+SELECT 'Soft drinks' AS name, 'drinks-soft-drinks-folder' as type FROM dual
+						]]>
+					</sql>
+				</query>
+			</queries>
+		</folder>
+	</objectType>
+	<objectType connType="Oracle" id="drinks-caffeinated">
+		<node>
+			<icon RSKEY="OracleIcons.EJBENTITY" />
+		</node>
+	</objectType>	
+	<objectType connType="Oracle" id="drinks-chocolate">
+		<node>
+			<icon RSKEY="OracleIcons.APPLICATIONMODULE" />
+		</node>
+	</objectType>	
+	<objectType connType="Oracle" id="drinks-soft-drinks-folder">
+		<node>
+			<icon RSKEY="OracleIcons.FAVORITES" />
+			<childType id="drinks-soft-drinks-1" nodeType="drinks-soft-drinks">
+				<queries>
+					<query>
+						<sql>
+							<![CDATA[
+SELECT 'Cola' AS name FROM dual
+UNION ALL
+SELECT 'Fanta' AS name FROM dual
+UNION ALL
+SELECT 'Sprite' AS name FROM dual
+		 					]]>
+						</sql>					
+					</query>
+				</queries>
+			</childType>
+			<childType id="drinks-soft-drinks-2" nodeType="drinks-schweppes">
+				<queries>
+					<query>
+						<sql>
+							<![CDATA[
+SELECT 'Schweppes' AS name FROM dual
+		 					]]>
+						</sql>					
+					</query>
+				</queries>
+			</childType>
+		</node>
+	</objectType>
+	<objectType connType="Oracle" id="drinks-soft-drinks">
+		<node>
+			<icon RSKEY="OracleIcons.USER" />
+		</node>
+	</objectType>
+	<objectType connType="Oracle" id="drinks-schweppes">
+		<node>
+			<icon RSKEY="OracleIcons.ACTION" />
+		</node>
+	</objectType>
+</navigator>
