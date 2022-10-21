@@ -128,6 +128,7 @@ Extend the context menu of any grid table (query results, reports, editors, etc.
   - [SQL Developer Documentation](https://docs.oracle.com/en/database/oracle/sql-developer/)
   - [GitHub repository for Oracle Database examples (SQL Developer Extensions)](https://github.com/oracle/oracle-db-examples/tree/master/sqldeveloper)
   - [XML Schemas of User Defined Extensions](https://github.com/oracle/oracle-db-examples/tree/master/sqldeveloper/extension/xml/schema)
+  - [Learn SQL in Detail](https://www.scaler.com/topics/sql/)
 
 - 3rd Party OpenSource Examples
   - [Show Me Password](https://github.com/tomecode/show-me-password-sqldev-jdev)
