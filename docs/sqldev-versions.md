@@ -4,11 +4,15 @@ This mapping is relevant, if an extension requires a certain SQL Developer versi
 
 | SQL Developer version | extension version | Notes |
 | --------------------- | ----------------- | ----- |
-| 3.2.20 | 11.2.0.09.87 | last version based on ESDK 1.0 and JDK 6 |
+| 3.2.20 | 11.2.0.09.87 | last version based on ESDK 1.0 and JDK6 |
+| 4.0.0 | 12.2.0.13.80 | first version based on ESDK 2.0 and JDK7|
+| 4.0.1 | 12.2.0.14.48 | |
+| 4.0.2 | 12.2.0.15.21 | |
 | 4.0.3 | 12.2.0.16.84 | last version based on JDK7 |
 | 4.1.0 | 12.2.0.19.07 | first version based on JDK8 |
 | 4.1.1 | 12.2.0.19.59 | |
 | 4.1.3 | 12.2.0.20.78 | |
+| 4.1.4 | 12.2.0.21.20 | |
 | 4.1.5 | 12.2.0.21.78 | |
 | 4.2.0 | 12.2.1.17.089.1709 | | 
 | 17.2.0 | 17.2.0.188.1159 | |
@@ -26,3 +30,10 @@ This mapping is relevant, if an extension requires a certain SQL Developer versi
 | 20.2.0 | 20.2.0.175.1842 | no 20.1.0 released |
 | 20.4.0 | 20.4.0.379.2205 | no 20.3.0 released |
 | 20.4.1 | 20.4.1.407.0006 | |
+| 21.2.0 | 21.2.0.187.1842 | no 21.1.0 released|
+| 21.4.0 | 21.4.0.346.2239 | no 21.3.0 released|
+| 21.4.1 | 21.4.1.349.1822 | |
+| 21.4.2 | 21.4.2.018.1706 | |
+| 21.4.3 | 21.4.3.063.0100 | last version based on JDK8 |
+| 22.2.0 | 22.2.0.173.2018 | first version based on JDK11, no 22.1.0 released|
+| 22.2.1 | 22.2.1.234.1810 | |
